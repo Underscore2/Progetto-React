@@ -530,9 +530,6 @@
     list-style: none;
 }
 
-.text-decoration {
-    text-decoration: none;
-}
 
 a:hover {
     color: white;
@@ -543,5 +540,6 @@ a:hover {
 /**********************************FONT SIZE***************************/
 
 a {
-    font-size: 18px
+    font-size: 18px;
+    text-decoration: none;
 }

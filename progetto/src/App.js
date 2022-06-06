@@ -1,6 +1,6 @@
 import './App.css';
 import 'antd/dist/antd.css';
-import Navbar from './Navbar.js';
+import Navbar from './Components/Navbar.js';
 import './css/helper-class.css';
 
 function App() {
