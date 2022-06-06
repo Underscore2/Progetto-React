@@ -1,0 +1,547 @@
+/*************************BUTTSTROP©***********************/
+
+
+/**************************MARGINS****************************/
+.m-0 {
+    margin: 0;
+}
+
+.m-1 {
+    margin: 0.25rem;
+}
+
+.m-2 {
+    margin: 0.50rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+.m-4 {
+    margin: 1.5rem;
+}
+
+.m-5 {
+    margin: 3rem;
+}
+
+/***********************MARGINS AXIS Y*************************/
+
+.my-0 {
+    margin: 0;
+}
+
+.my-1 {
+    margin: 0.25rem 0;
+}
+
+.my-2 {
+    margin: 0.50rem 0;
+}
+
+.my-3 {
+    margin: 1rem 0;
+}
+
+.my-4 {
+    margin: 1.5rem 0;
+}
+
+.my-5 {
+    margin: 3rem;
+}
+
+/***********************MARGINS AXIS x*************************/
+
+.mx-0 {
+    margin: 0;
+}
+
+.mx-1 {
+    margin: 0 0.25rem;
+}
+
+.mx-2 {
+    margin: 0 0.5rem;
+}
+
+.mx-3 {
+    margin: 0 1rem;
+}
+
+.mx-4 {
+    margin: 0 1.5rem;
+}
+
+.mx-5 {
+    margin: 0 3rem;
+}
+
+/***********************MARGINS TOP*************************/
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.50rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+/***********************MARGINS BOTTOM*************************/
+
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.mb-1 {
+    margin-bottom: 0.25rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.50rem;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+/***********************MARGINS START*************************/
+
+
+.ms-0 {
+    margin-left: 0;
+}
+
+.ms-1 {
+    margin-left: 0.25rem;
+}
+
+.ms-2 {
+    margin-left: 0.50rem;
+}
+
+.ms-3 {
+    margin-left: 1rem;
+}
+
+.ms-4 {
+    margin-left: 1.5rem;
+}
+
+.ms-5 {
+    margin-left: 3rem;
+}
+
+/***********************MARGINS END*************************/
+
+
+.me-0 {
+    margin-right: 0;
+}
+
+.me-1 {
+    margin-right: 0.25rem;
+}
+
+.me-2 {
+    margin-right: 0.50rem;
+}
+
+.me-3 {
+    margin-right: 1rem;
+}
+
+.me-4 {
+    margin-right: 1.5rem;
+}
+
+.me-5 {
+    margin-right: 3rem;
+}
+
+/**********************************PADDINGS**************************************/
+
+.p-0 {
+    padding: .0;
+}
+
+.p-1 {
+    padding: 0.25rem;
+}
+
+.p-2 {
+    padding: 0.50rem;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+.p-4 {
+    padding: 1.5rem;
+}
+
+.p-5 {
+    padding: 3rem;
+}
+
+/***********************PADDINGS AXIS X*************************/
+
+.px-0 {
+    padding: 0;
+}
+
+.px-1 {
+    padding: 0 (0.25rem);
+}
+
+.px-2 {
+    padding: 0 (0.50rem);
+}
+
+.px-3 {
+    padding: 0 1rem;
+}
+
+.px-4 {
+    padding: 0 1.5rem;
+}
+
+.px-5 {
+    padding: 0 3rem;
+}
+
+/***********************PADDINGS AXIS Y*************************/
+
+.py-0 {
+    padding: 0;
+}
+
+.py-1 {
+    padding: 0.25rem 0;
+}
+
+.py-2 {
+    padding: 0.50rem 0;
+}
+
+.py-3 {
+    padding: 1rem 0;
+}
+
+.py-4 {
+    padding: 1.5rem 0;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+/***********************PADDINGS TOP*************************/
+
+.pt-0 {
+    padding-top: 0;
+}
+
+.pt-1 {
+    padding-top: 0.25rem;
+}
+
+.pt-2 {
+    padding-top: 0.50rem;
+}
+
+.pt-3 {
+    padding-top: 1rem;
+}
+
+.pt-4 {
+    padding-top: 1.75rem;
+}
+
+.pt-5 {
+    padding-top: 3rem;
+}
+
+/***********************PADDINGS BOTTOM*************************/
+
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.pb-1 {
+    padding-bottom: 0.25rem;
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem;
+}
+
+.pb-3 {
+    padding-bottom: 1rem;
+}
+
+.pb-4 {
+    padding-bottom: 1.5rem;
+}
+
+.pb-5 {
+    padding-bottom: 3rem;
+}
+
+/***********************PADDINGS START*************************/
+
+
+.ps-0 {
+    padding-left: 0;
+}
+
+.ps-1 {
+    padding-left: 0.25rem;
+}
+
+.ps-2 {
+    padding-left: 0.5rem;
+}
+
+.ps-3 {
+    padding-left: 1rem;
+}
+
+.ps-4 {
+    padding-left: 1.5rem;
+}
+
+.ps-5 {
+    padding-left: 3rem;
+}
+
+/***********************PADDINGS END*************************/
+
+
+.pe-0 {
+    padding-right: 0;
+}
+
+.pe-1 {
+    padding-right: 0.25rem;
+}
+
+.pe-2 {
+    padding-right: 0.5rem;
+}
+
+.pe-3 {
+    padding-right: 1rem;
+}
+
+.pe-4 {
+    padding-right: 1.5rem;
+}
+
+.pe-5 {
+    padding-right: 3rem;
+}
+
+/*********************************************DIMESIONS********************************************************/
+
+.w-0 {
+    width: 0%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+
+.h-0 {
+    height: 0%;
+}
+
+.h-25 {
+    height: 25%;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-75 {
+    height: 75%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.h-max-content {
+    height: max-content;
+}
+
+/****************************************FLEXBOX*******************/
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-col-reverse {
+    flex-direction: column-reverse;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-start {
+    justify-content: start;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+/***************************** MISCELLANEOUS *******************/
+
+.border-dev {
+    border: 1px solid red;
+}
+
+/******************************COLORS*****************************/
+
+.font-primary {
+    color: #eeeeee;
+}
+
+.font-secondary {
+    color: #babcbc;
+}
+
+.color-orange {
+    color: #e7893c;
+}
+
+.color-green {
+    color: #30deab;
+}
+
+.color-red {
+    color: #ff5972;
+}
+
+.gradient {
+    background: rgb(48, 222, 171);
+    background: linear-gradient(180deg, rgba(48, 222, 171, 1) 35%, rgba(255, 89, 114, 1) 100%);
+}
+
+.bg-black {
+    background-color: #141415;
+}
+
+.white-modules {
+    background-color: rgba(255, 255, 255, 0.111);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+}
+
+.list-style {
+    list-style: none;
+}
+
+.text-decoration {
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    font-size: 21px;
+    transition: 3.5ms ease-in-out;
+}
+
+/**********************************FONT SIZE***************************/
+
+a {
+    font-size: 18px
+}
