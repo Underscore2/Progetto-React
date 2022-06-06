@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Space, Typography } from 'antd';
-import './utilities/texts.json';
-import './css/helper-class.css';
-import logo from './images/egg-fill.svg';
+import texts from '../utilities/texts.json';
+import '../css/helper-class.css';
+import logo from '../images/egg-fill.svg';
 import Modal from 'antd/lib/modal/Modal';
-
 
 
 function Navbar() {
   const [isModalVisible, setIsModalVisible] = useState(false);
+  useEffect(() => {
+    texts.map((item) => { console.log(item) })
 
+  }, [])
   const showModal = () => {
     setIsModalVisible(true);
   };
@@ -34,17 +36,17 @@ function Navbar() {
             <ul className='list-style d-flex p-0 m-0 align-center'>
               <Space size={15} className="d-flex align-center">
                 <li>
-                  <a href='#' className='text-decoration font-primary'>Features</a>
+                  <a href='#' className=' font-primary'>Features</a>
                 </li>
                 <li>
-                  <a href='#' className='text-decoration font-primary'>Pricing</a>
+                  <a href='#' className=' font-primary'>Pricing</a>
                 </li>
                 <li>
-                  <a href='#' className='text-decoration font-primary' onClick={showModal}>Login</a>
+                  <a href='#' className=' font-primary' onClick={showModal}>Login</a>
                 </li>
 
                 <li>
-                  <a href='#' className='text-decoration font-primary'>Sign Up</a>
+                  <a href='#' className=' font-primary'>Sign Up</a>
                 </li>
               </Space>
             </ul>
