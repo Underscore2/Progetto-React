@@ -1,64 +1,52 @@
 import React, { useState, useEffect } from 'react';
-import { Row, Col, Space, Typography } from 'antd';
 import texts from '../utilities/texts.json';
 import '../css/helper-class.css';
 import logo from '../images/egg-fill.svg';
-import Modal from 'antd/lib/modal/Modal';
-
+import {Row, Col} from 'react-bootstrap';
+import menu  from '../images/cell.svg';
 
 function Navbar() {
-  const [isModalVisible, setIsModalVisible] = useState(false);
   useEffect(() => {
     texts.map((item) => { console.log(item) })
-
   }, [])
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  }
   return (
-    < >
-      <div className='p-1'>
-        <Row className='white-modules d-flex align-center px-5' style={{ height: '7vh' }}>
-          <Col span={6} >
-            <div>
-              <img src={logo} style={{ width: '50px', height: 'auto' }} alt='logo'></img>
+      <div className='bgblack p-3 m-0'>
+        <Row className='m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100'>
+          <Col className='p-1 align-items-center justify-content-around flex-sm-row'  xs={9} sm={9} md={7}>
+              <img src={logo} className='uovo' style={{ width: '50px', height: 'auto' }} alt='logo'></img>
+            <a href='!#' className='text-decoration-none font-secondary '>
+             LMAO Corporation
+            </a>
+          </Col>
+          <Col xs={3} sm={3} md={5} className='d-md-flex p-1 justify-content-end align-items-center p-0 m-0'>
+            <ul className='gx-5 list-unstyled d-md-flex d-none justify-content-sm-end p-0 m-0 gap:5' >
+                <li>
+                  <a href='' className='text-decoration-none font-secondary px-2'>
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href='' className='text-decoration-none font-secondary px-2'>
+                    Pricing
+                  </a>
+                </li>
+                <li>
+                  <a href='' className='text-decoration-none font-secondary px-2'>
+                    Login
+                  </a>
+                </li>
+                <li>
+                  <a href='' className='text-decoration-none font-secondary px-2'>Sign Up</a>
+                </li>
+            </ul>
+            <div className='d-flex justify-content-center align-items-center d-md-none'>
+              <a href=''>
+                <img src={menu} className='menu' style={{ width: '40px', height: 'auto' }}></img>
+              </a>
             </div>
           </Col>
-          <Col span={6} offset={12} className="d-flex justify-end w-100" >
-            <ul className='list-style d-flex p-0 m-0 align-center'>
-              <Space size={15} className="d-flex align-center">
-                <li>
-                  <a href='#' className=' font-primary'>Features</a>
-                </li>
-                <li>
-                  <a href='#' className=' font-primary'>Pricing</a>
-                </li>
-                <li>
-                  <a href='#' className=' font-primary' onClick={showModal}>Login</a>
-                </li>
-
-                <li>
-                  <a href='#' className=' font-primary'>Sign Up</a>
-                </li>
-              </Space>
-            </ul>
-          </Col>
-          <Modal className='white-modules bg-black' title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </Modal>
         </Row>
       </div>
-    </>
   )
 }
 
