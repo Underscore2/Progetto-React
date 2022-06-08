@@ -29,6 +29,20 @@
       "description": "Whether you are just starting your journey with options or work on the street yourself, our tools are easy enough to use starting on day 1 and give you the competitive knowledge learned from years of trial & error.",
       "schema5Img": "progetto/src/images/power.2c9dd280.svg"
     },
+    "list1": {
+      "title": "We beat the market 9 out of 10 years.",
+      "subtitle": "Average yearly return of 35.4%.",
+      "l1": "CALL CREDIT SPREAD",
+      "l2": "COVERED CALL",
+      "l3": "DEBIT CALL SPREAD",
+      "l4": "DEBIT PUT SPREAD",
+      "l5": "BUY CALL",
+      "l6": "SELL PUT",
+      "l7": "BUY PUT",
+      "l8": "PUT CREDIT SPREAD",
+      "rightList": "Daily recommended strike prices and proprietary indicators for",
+      "rightList2": "8 STRATEGIES"
+    },
     "pricingLeft": {
       "title": "Only $67 /month",
       "l1": "Daily options recommendations",
