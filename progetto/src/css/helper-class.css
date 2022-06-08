@@ -1,0 +1,56 @@
+/*************************BUTTSTROP©***********************/
+
+/***************************** MISCELLANEOUS *******************/
+
+.border-dev {
+    border: 1px solid red;
+}
+
+/******************************COLORS*****************************/
+
+.font-primary {
+    color: #eeeeee;
+}
+
+.font-secondary {
+    color: #babcbc;
+}
+
+.color-orange {
+    color: #e7893c;
+}
+
+.color-green {
+    color: #30deab;
+}
+
+.color-red {
+    color: #ff5972;
+}
+
+.gradient {
+    background: rgb(48, 222, 171);
+    background: linear-gradient(180deg, rgba(48, 222, 171, 1) 35%, rgba(255, 89, 114, 1) 100%);
+}
+
+.bg-black {
+    background-color: #141415;
+}
+
+.white-modules {
+    background-color: rgba(255, 255, 255, 0.111);
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+}
+
+a:hover {
+    color: white;
+    transition: 3.5ms ease-in-out;
+}
+
+/**********************************FONT SIZE***************************/
+
+a {
+    font-size: 18px;
+    text-decoration: none;
+}
