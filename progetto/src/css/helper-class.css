@@ -20,6 +20,16 @@
     color: #e7893c;
 }
 
+.bg-orange {
+    background-color: #e7893c;
+    border-color: #e7893c;
+}
+
+.bg-orange:hover {
+    background-color: #ff8827;
+    border-color: #ff8827;
+}
+
 .color-green {
     color: #30deab;
 }
@@ -53,4 +63,28 @@ a:hover {
 a {
     font-size: 18px;
     text-decoration: none;
+}
+
+.f-title {
+    font-size: 3rem;
+}
+
+.hero {
+    max-width: 125%;
+    max-height: 125%;
+    display: block;
+}
+
+.submit:hover {
+    animation: shadow-drop-center 0.6s linear both
+}
+
+@keyframes shadow-drop-center {
+    0% {
+        box-shadow: 0 0 0 0 transparent
+    }
+
+    100% {
+        box-shadow: 0 0 20px 0 #ff8827
+    }
 }
