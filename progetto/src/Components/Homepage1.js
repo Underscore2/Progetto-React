@@ -1,7 +1,7 @@
-import React from "react";
+/*import React from "react";
 import Hero from "./Hero.js";
 
-function Homepage() {
+function Homepage1() {
   return (
     <>
       <Hero />
@@ -9,4 +9,5 @@ function Homepage() {
   );
 }
 
-export default Homepage;
+export default Homepage1;
+*/
