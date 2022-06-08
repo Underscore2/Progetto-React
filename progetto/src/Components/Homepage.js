@@ -1,12 +1,12 @@
-import React from 'react';
-import Hero from './Hero.js'
+import React from "react";
+import Hero from "./Hero.js";
 
 function Homepage() {
-    return (
-        <>
-            <Hero />
-        </>
-    )
+  return (
+    <>
+      <Hero />
+    </>
+  );
 }
 
 export default Homepage;
