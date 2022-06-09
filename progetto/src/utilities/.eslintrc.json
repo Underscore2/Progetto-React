@@ -1,0 +1,19 @@
+{
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        // Override our default settings just for this directory
+        "eqeqeq": "warn",
+        "strict": "off",
+        "aspects": [ "noHref", "invalidHref", "preferButton" ],
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+              "components": ["Link"],
+              "specialLink": ["hrefLeft", "hrefRight"],
+              "aspects": ["noHref", "invalidHref", "preferButton"]
+            }
+          ]
+    }
+}

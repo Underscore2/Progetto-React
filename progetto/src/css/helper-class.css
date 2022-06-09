@@ -8,6 +8,13 @@
 
 .border-orange {
     border: 1px solid orange;
+  border: 1px solid red;
+}
+
+.uovo:hover{
+  
+cursor:pointer;
+animation:vibrate 0.3s linear both} @keyframes vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}
 }
 
 
@@ -61,6 +68,47 @@
 a:hover {
     color: white;
     transition: 3.5ms ease-in-out;
+  color: #eeeeee;
+}
+
+.font-secondary {
+  color: #babcbc;
+}
+
+.color-orange {
+  color: #e7893c;
+}
+
+.color-green {
+  color: #30deab;
+}
+
+.color-red {
+  color: #ff5972;
+}
+
+.gradient {
+  background: rgb(48, 222, 171);
+  background: linear-gradient(
+    180deg,
+    rgba(48, 222, 171, 1) 35%,
+    rgba(255, 89, 114, 1) 100%
+  );
+}
+
+.bgblack {
+  background-color: #141415;
+}
+
+.white-modules {
+  background-color: rgba(255, 255, 255, 0.111);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+}
+
+a:hover {
+  color: white;
+  transition: 3.5ms ease-in-out;
 }
 
 /**********************************FONT SIZE***************************/
