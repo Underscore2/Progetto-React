@@ -1,18 +1,12 @@
 import React from "react";
-import text from "../../utilities/texts.json";
-import ListsImg from "../../images/grafico.png";
+import ListsImg from "../../images/grafico.jpg";
 
 export default function Graphic() {
-
-        return (
-            text.map((item) => {
-                return(
-                    <section className="d-flex flex-column justify-content-center align-items-center mt-5 container-sm py-3">
-                        <h1 className="font-primary">{item.list1.title}</h1>
-                        <h2 className="font-primary">{item.list1.subtitle}</h2>
-                        <img className="w-100" src={ListsImg} alt=""></img>
-                    </section>
-                )
-            })
-        )
-    }
+  return (
+    <section className="d-flex flex-column justify-content-center align-items-center container-xxl py-3">
+      <h2 className="font-secondary text-center">We beat the market <span className="font-primary fw-bold"> out of 10 years.</span></h2>
+      <h3 className="font-secondary text-center mb-5">Average yearly return of <span className="font-primary fw-bold">35.4%.</span></h3>
+      <img className="w-100 graph mt-5" src={ListsImg} alt=""></img>
+    </section>
+  );
+}

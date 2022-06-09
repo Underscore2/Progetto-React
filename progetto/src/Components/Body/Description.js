@@ -1,53 +1,25 @@
 import React from "react";
-import {Col, Row} from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import text from "../../utilities/texts.json";
 
-
 export default function Description() {
-    return(
-        text.map((item) =>{
-            return(
-                <section className="container-sm py-3">
-            <Row>
-                <Col>
-                    <h1>{item.schema1.title}</h1>
-                    <h6>{item.schema1.description}</h6>
-                </Col>
-                <Col>
-                    <img src={item.schema1.schema1img} alt=""/>
-                </Col>
-                <Col>
-                    <h1>{item.schema2.title}</h1>
-                    <h6>{item.schema2.description}</h6>
-                </Col>
-                <Col>
-                    <img src={item.schema2.schema2img} alt=""/>
-                </Col>
-                <Col>
-                    <h1>{item.schema3.title}</h1>
-                    <h6>{item.schema3.description}</h6>
-                </Col>
-                <Col>
-                    <img src={item.schema3.schema3img} alt=""/>
-                </Col>
-                <Col>
-                    <h1>{item.schema4.title}</h1>
-                    <h6>{item.schema4.description}</h6>
-                </Col>
-                <Col>
-                    <img src={item.schema4.schema4img} alt=""/>
-                </Col>
-                <Col>
-                    <h1>{item.schema5.title}</h1>
-                    <h6>{item.schema5.description}</h6>
-                </Col>
-                <Col>
-                    <img src={item.schema5.schema5img} alt=""/>
-                </Col>
+  return text.map((item) => {
+    return (
+      <section className="container-xxl px-4">
+        {item.schema.map((desc, index) => {
+          return (
+            <Row key={index} className="white-modules p-2 my-5">
+              <Col xs={12} md={8} className={index % 2 ? "d-flex flex-column order-0 py-2 justify-content-center":"order-1 d-flex py-2 justify-content-center flex-column"}>
+                <h1 className="font-primary mb-4 link">{desc.title} </h1>
+                <h6 className="font-secondary lh-base">{desc.subtitle} </h6>
+              </Col>
+              <Col xs={12} md={4} className={index % 2 ? "order-1 d-flex justify-content-center py-2 align-items-center mt-4 m-lg-0":"order-0 d-flex py-2 justify-content-center align-items-center mt-4 m-lg-0"}>
+                <img src={desc.image} alt="" className="desc-img"/>
+              </Col>
             </Row>
-                </section>
-            )
-        })
-
-    )
+          );
+        })}
+      </section>
+    );
+  });
 }

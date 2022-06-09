@@ -7,8 +7,7 @@
 }
 
 .border-orange {
-    border: 1px solid orange;
-  border: 1px solid red;
+    border: 1px solid #ff8a00;
 }
 
 .uovo:hover{
@@ -29,17 +28,17 @@ animation:vibrate 0.3s linear both} @keyframes vibrate{0%{transform:translate(0)
 }
 
 .color-orange {
-    color: #e7893c;
+    color: #ff8a00;
 }
 
 .bg-orange {
-    background-color: #e7893c;
-    border-color: #e7893c;
+    background-color: #ff8a00;
+    border-color: #ff8a00;
 }
 
 .bg-orange:hover {
-    background-color: #ff8827;
-    border-color: #ff8827;
+    background-color: #ff8a00;
+    border-color: #ff8a00;
 }
 
 .color-green {
@@ -55,10 +54,6 @@ animation:vibrate 0.3s linear both} @keyframes vibrate{0%{transform:translate(0)
     background: linear-gradient(180deg, rgba(48, 222, 171, 1) 35%, rgba(255, 89, 114, 1) 100%);
 }
 
-.bg-black {
-    background-color: #141415;
-}
-
 .white-modules {
     background-color: rgba(255, 255, 255, 0.111);
     backdrop-filter: blur(3px);
@@ -68,7 +63,6 @@ animation:vibrate 0.3s linear both} @keyframes vibrate{0%{transform:translate(0)
 a:hover {
     color: white;
     transition: 3.5ms ease-in-out;
-  border: 1px solid red;
 }
 
 /******************************COLORS*****************************/
@@ -78,11 +72,11 @@ a:hover {
 }
 
 .font-secondary {
-  color: #949898;
+  color: #abaaaa;
 }
 
 .color-orange {
-  color: #e7893c;
+  color: #ff8a00;
 }
 
 .color-green {
@@ -103,7 +97,7 @@ a:hover {
 }
 
 .bgblack {
-  background-color: #141415;
+  background-color: #1e1e1e;
 }
 
 .white-modules {
@@ -129,9 +123,21 @@ a {
 }
 
 .hero {
-    max-width: 125%;
-    max-height: 125%;
+    max-width: 115%;
+    max-height: 115%;
     display: block;
+}
+
+.desc-img {
+    max-width: 65%;
+    max-height: 65%;
+    display: block;
+}
+
+.graph {
+  max-width: 80%;
+  max-height: 70%;
+  display: block;
 }
 
 .submit:hover {

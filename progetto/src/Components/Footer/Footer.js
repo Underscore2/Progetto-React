@@ -9,10 +9,10 @@ class Footer extends React.Component {
             <div>
                 {texts.map((item) => {
                     return (
-                        <div className='bgblack p-3 m-0'>
+                        <div className='bgblack p-3 container-xxl'>
                             <Row className='m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100'>
-                                <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2 my-3">
-                                    <a>
+                                <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2">
+                                    <a href="!#" className="d-flex align-items-center">
                                         <img
                                             src={logo}
                                             alt="logo"
@@ -25,23 +25,21 @@ class Footer extends React.Component {
                                 </Col>
                                 <Col xs={12} md={8} lg={6} xl={5} xxl={4} className='my-3'>
                                     <Row className="d-flex w-100 p-0 m-0">
-
                                         {
                                             texts.map((item) => {
                                                 return (item.footer.footerLinks.map((element, index) => {
                                                     return (
                                                         <Col key={index} xs={12} sm={4} className="d-flex justify-content-start justify-content-sm-center justify-content-lg-end align-items-center p-0">
-                                                            <a key={index} hreft="#" className=" my-1 mx-1 link footerlink font-secondary">
+                                                            <a href="!#" key={index} hreft="#" className=" my-1 mx-1 link footerlink font-secondary">
                                                                 {element}
                                                             </a>
                                                         </Col >)
                                                 }))
                                             })
-
                                         }
                                     </Row>
                                 </Col>
-                                <Col xs={12} className='font-secondary my-3'>{item.footer.description}</Col>
+                                <Col xs={12} className='font-secondary my-2'>{item.footer.description}</Col>
                             </Row>
                         </div>
                     );

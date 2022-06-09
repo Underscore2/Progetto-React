@@ -4,44 +4,47 @@
     "title": "THE ONLY DONE FOR YOU OPTION PICKER",
     "subtitle": "Get trade alerts. Cancel anytime.",
     "preform": "Enter your email to create or restart your membership",
-    "schema1": {
-      "title": "Why us?",
-      "description": "Ex-traders building the best option AI algorithm, which makes large profits in minutes a day. We are ex-quants with combined 37 years of experience. Optionsfy software picks the ticker, strikes and expiration dates for you so you can profit without the long guesswork. It's powered by an algorithm fed with 10 years of data and 10 factors proven to work. Optionsfy saves you time and makes you more profitable with high return, consistent trades in minutes in ALL MARKET ENVIRONMENTS.",
-      "schema1Img": "progetto/src/images/why_us.bd4625af.svg"
-    },
-    "schema2": {
-      "title": "Competitive Advantage of Artificial Intelligence",
-      "description": "Harness the power of industry leading A.I. backed algorithms. Similar algorithms the top hedge funds use are now at your fingertips. Our HotScore technology aggregates data from multiple sources to quickly and clearly show you the best options to trade all DONE FOR YOU.",
-      "schema2Img": "progetto/src/images/ai.454f76a1.svg"
-    },
-    "schema3": {
-      "title": "Speed & time are at our core",
-      "description": "Speed means everything in trading. With perfectly timed notifications to place winning trades ahead of your competition, never miss another opportunity with all the best option trades delivered daily to your inbox at market open.",
-      "schema3Img": "progetto/src/images/speed.64d129e1.svg"
-    },
-    "schema4": {
-      "title": "Built in options chain scanning",
-      "description": "Overwhelmed by varying strike prices and which options to buy? We scan the entire options chain so you don’t have to, researching each possible trade ahead of time and recommend you the best plays",
-      "schema4Img": "progetto/src/images/scan.f13d4c77.svg"
-    },
-    "schema5": {
-      "title": "Powerful for beginners & seasoned professionals alike",
-      "description": "Whether you are just starting your journey with options or work on the street yourself, our tools are easy enough to use starting on day 1 and give you the competitive knowledge learned from years of trial & error.",
-      "schema5Img": "progetto/src/images/power.2c9dd280.svg"
-    },
-    "list1": {
-      "title": "We beat the market 9 out of 10 years.",
-      "subtitle": "Average yearly return of 35.4%.",
-      "l1": "CALL CREDIT SPREAD",
-      "l2": "COVERED CALL",
-      "l3": "DEBIT CALL SPREAD",
-      "l4": "DEBIT PUT SPREAD",
-      "l5": "BUY CALL",
-      "l6": "SELL PUT",
-      "l7": "BUY PUT",
-      "l8": "PUT CREDIT SPREAD",
-      "rightList": "Daily recommended strike prices and proprietary indicators for",
-      "rightList2": "8 STRATEGIES"
+    "Navbar": ["Features", "Pricing", "Login", "Sign up"],
+    "schema": [
+      {
+        "title": "Why us?",
+        "subtitle": "Ex-traders building the best option AI algorithm, which makes large profits in minutes a day. We are ex-quants with combined 37 years of experience. Optionsfy software picks the ticker, strikes and expiration dates for you so you can profit without the long guesswork. It's powered by an algorithm fed with 10 years of data and 10 factors proven to work. Optionsfy saves you time and makes you more profitable with high return, consistent trades in minutes in ALL MARKET ENVIRONMENTS.",
+        "image": "/images/team.svg"
+      },
+      {
+        "title": "Competitive Advantage of Artificial Intelligence",
+        "subtitle": "Harness the power of industry leading A.I. backed algorithms. Similar algorithms the top hedge funds use are now at your fingertips. Our HotScore technology aggregates data from multiple sources to quickly and clearly show you the best options to trade all DONE FOR YOU.",
+        "image": "/images/artificial-intelligence-ai.svg"
+      },
+      {
+        "title": "Speed & time are at our core",
+        "subtitle": "Speed means everything in trading. With perfectly timed notifications to place winning trades ahead of your competition, never miss another opportunity with all the best option trades delivered daily to your inbox at market open.",
+        "image": "/images/speed.svg"
+      },
+      {
+        "title": "Built in options chain scanning",
+        "subtitle": "Overwhelmed by varying strike prices and which options to buy? We scan the entire options chain so you don’t have to, researching each possible trade ahead of time and recommend you the best plays",
+        "image": "/images/scan.svg"
+      },
+      {
+        "title": "Powerful for beginners & seasoned professionals alike",
+        "subtitle": "Whether you are just starting your journey with options or work on the street yourself, our tools are easy enough to use starting on day 1 and give you the competitive knowledge learned from years of trial & error.",
+        "image": "/images/increasing-users.svg"
+      }
+    ],
+    "list": [
+      { "li": "CALL CREDIT SPREAD" },
+      { "li": "COVERED CALL" },
+      { "li": "DEBIT CALL SPREAD" },
+      { "li": "DEBIT PUT SPREAD" },
+      { "li": "BUY CALL" },
+      { "li": "SELL PUT" },
+      { "li": "BUY PUT" },
+      { "li": "PUT CREDIT SPREAD" }
+    ],
+    "texts": {
+      "text1": "Daily recommended strike prices and proprietary indicators for",
+      "text2": "8 STRATEGIES"
     },
     "pricingLeft": {
       "title": "Only $67 /month",
@@ -63,11 +66,7 @@
     "footer": {
       "subtitle": "LMAO Corporation",
       "description": "Disclaimer: Please be aware that trading stocks, futures, stock options, and futures options involves a substantial risk of loss and is not suitable for all investors. Past performance is not necessarily indicative of future results. INFORMATION IS FOR GENERAL EDUCATIONAL AND RESEARCH PURPOSES AND SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE. More info here",
-      "footerLinks": [
-        "TERMS OF SERVICE",
-        "DISCLAIMER",
-        "PRIVACY POLICY"
-      ]
+      "footerLinks": ["TERMS OF SERVICE", "DISCLAIMER", "PRIVACY POLICY"]
     }
   }
 ]

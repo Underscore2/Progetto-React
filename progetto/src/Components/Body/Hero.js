@@ -3,13 +3,14 @@ import text from "../../utilities/texts.json";
 import { Row, Col, Form, Button } from "react-bootstrap";
 import imgHero from "../../images/hero.png";
 
-export  default function Hero(){
+class Hero extends React.Component{
+  render(){
     return (
       <div>
         {text.map((item) => {
           return (
-            <section className="container-sm py-3">
-              <Row className=" white-modules w-100 m-0 py-3 justify-content-center align-items-center px-4 m-0 w-100">
+            <section className="container-xxl py-3">
+              <Row className="w-100 m-0 py-3 justify-content-center align-items-center px-4 m-0 w-100">
                 <Col xs={12} lg={6} className="order-1 py-2 my-3 order-lg-0">
                   <h1 className="fw-bold py-2 m-0 f-title font-primary">
                     {item.title}
@@ -44,7 +45,7 @@ export  default function Hero(){
                   lg={{ span: 5, offset: 1 }}
                   className="order-0 py-2 my-3 d-flex justify-content-center align-items-center order-lg-1"
                 >
-                  <img className="hero p-4 me-lg-5" src={imgHero} alt=""></img>
+                  <img className="hero" src={imgHero} alt=""></img>
                 </Col>
               </Row>
             </section>
@@ -52,4 +53,7 @@ export  default function Hero(){
         })}
       </div>
     )
+  }
 }
+
+export default Hero;

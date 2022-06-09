@@ -1,52 +1,38 @@
 import React from "react";
-import {Col, Row} from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import text from "../../utilities/texts.json";
 
-
 export default function List() {
-    return(
-        text.map((item) =>{
-            return(
-                    <section className="container-sm py-3">
-                        <Row>
-                            <Col lg={6}>
-                                <ul>
-                                    <li className="font-primary mt-5 h3 color-orange">
-                                        {item.list1.l1}
-                                    </li>
-                                    <li className="font-primary mt-4 h3 font-secondary">
-                                        {item.list1.l2}
-                                    </li>
-                                    <li className="font-primary mt-4 h3">{item.list1.l3}</li>
-                                    <li className="font-primary mt-4 h3 color-orange">
-                                        {item.list1.l4}
-                                    </li>
-                                    <li className="font-primary mt-4 h3 font-secondary">
-                                        {item.list1.l5}
-                                    </li>
-                                    <li className="font-primary mt-4 h3">{item.list1.l6}</li>
-                                    <li className="font-primary mt-4 h3 color-orange">
-                                        {item.list1.l7}
-                                    </li>
-                                    <li className="font-primary mt-4 h3 font-secondary">
-                                        {item.list1.l8}
-                                    </li>
-                                </ul>
-                            </Col>
-                            <Col xs={12} lg={6}>
-                                <div className="d-flex flex-column mt-5">
-                                    <h1 className="font-primary font-secondary">
-                                        {item.list1.rightList}
-                                    </h1>
-                                    <h1 className="font-primary fw-bold ">
-                                        {item.list1.rightList2}
-                                    </h1>
-                                </div>
-                            </Col>
-                        </Row>
-                    </section>
-            )
-        })
-
-    )
+  return text.map((item) => {
+    return (
+      <section className="container-xxl py-3 ">
+        <Row>
+          <Col xs={12} md={6} className="order-1 mt-5 order-md-0 mt-md-0 d-flex justify-content-center align-items-center">
+            <ul className="p-0 m-0">
+              {item.list.map((point, index) => {
+                return (
+                  <>
+                    <li
+                      key={index}
+                      className={index % 2 ? "mt-3 font-secondary h4" :  index % 3 ? "font-primary mt-3 h4": "color-orange mt-3 h4"}
+                    >
+                      {point.li}
+                    </li>
+                    </>
+                );
+              })}
+            </ul>
+          </Col>
+          <Col xs={12} md={6} className="d-flex justify-content-center order-0 order-md-1">
+            <div className="d-flex flex-column mt-5 w-75">
+              <h3 className="font-secondary">
+                {item.texts.text1}
+              </h3>
+              <h3 className="font-primary fw-bold">{item.texts.text2}</h3>
+            </div>
+          </Col>
+        </Row>
+      </section>
+    );
+  });
 }

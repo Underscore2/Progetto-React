@@ -9,9 +9,9 @@ export default function Homepage() {
   return (
     <>
         <Hero />
+        <Description/>
         <Graphic/>
         <List/>
-        <Description/>
         <Cards/>
     </>
   )
