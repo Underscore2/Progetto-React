@@ -1,8 +1,7 @@
 import React from "react";
-import texts from "../utilities/texts.json";
-import "../css/helper-class.css";
+import texts from "../../utilities/texts.json";
 import { Col, Row } from "react-bootstrap";
-import logo from "../images/egg-fill.svg";
+import logo from "../../images/egg-fill.svg";
 
 class Footer extends React.Component {
     render() {

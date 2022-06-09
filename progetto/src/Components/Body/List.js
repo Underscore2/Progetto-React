@@ -1,6 +1,6 @@
 import React from "react";
 import {Col, Row} from "react-bootstrap";
-import text from "../utilities/texts.json";
+import text from "../../utilities/texts.json";
 
 
 export default function List() {

@@ -1,7 +1,7 @@
 import React from "react";
-import text from "../utilities/texts.json";
+import text from "../../utilities/texts.json";
 import { Row, Col, Form, Button } from "react-bootstrap";
-import imgHero from "../images/hero.png";
+import imgHero from "../../images/hero.png";
 
 export  default function Hero(){
     return (
@@ -47,8 +47,6 @@ export  default function Hero(){
                   <img className="hero p-4 me-lg-5" src={imgHero} alt=""></img>
                 </Col>
               </Row>
-
-
             </section>
           );
         })}

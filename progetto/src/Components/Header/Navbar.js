@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import texts from '../utilities/texts.json';
-import '../css/helper-class.css';
-import logo from '../images/egg-fill.svg';
+import React, { useEffect } from 'react';
+import texts from '../../utilities/texts.json';
+import logo from '../../images/egg-fill.svg';
 import {Row, Col} from 'react-bootstrap';
-import menu  from '../images/cell.svg';
+import menu  from '../../images/cell.svg';
 
 function Navbar() {
   useEffect(() => {

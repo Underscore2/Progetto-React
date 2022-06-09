@@ -1,6 +1,6 @@
 import React from "react";
-import text from "../utilities/texts.json";
-import ListsImg from "../images/grafico.png";
+import text from "../../utilities/texts.json";
+import ListsImg from "../../images/grafico.png";
 
 export default function Graphic() {
 
