@@ -61,13 +61,13 @@
       "l5": "Proprietary indicators"
     },
     "footer": {
-      "footerImg": "",
-      "subtitle": "power your alpha",
-      "info": "power your alpha",
+      "subtitle": "LMAO Corporation",
       "description": "Disclaimer: Please be aware that trading stocks, futures, stock options, and futures options involves a substantial risk of loss and is not suitable for all investors. Past performance is not necessarily indicative of future results. INFORMATION IS FOR GENERAL EDUCATIONAL AND RESEARCH PURPOSES AND SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE. More info here",
-      "footerLink1": "TERMS OF SERVICE",
-      "footerLink2": "PRIVACY POLICY",
-      "footerLink3": "DISCLAIMER"
+      "footerLinks": [
+        "TERMS OF SERVICE",
+        "DISCLAIMER",
+        "PRIVACY POLICY"
+      ]
     }
   }
 ]

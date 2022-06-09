@@ -68,11 +68,17 @@ animation:vibrate 0.3s linear both} @keyframes vibrate{0%{transform:translate(0)
 a:hover {
     color: white;
     transition: 3.5ms ease-in-out;
+  border: 1px solid red;
+}
+
+/******************************COLORS*****************************/
+
+.font-primary {
   color: #eeeeee;
 }
 
 .font-secondary {
-  color: #babcbc;
+  color: #949898;
 }
 
 .color-orange {
@@ -106,8 +112,8 @@ a:hover {
   border-radius: 5px;
 }
 
-a:hover {
-  color: white;
+.link:hover {
+  color: rgb(255, 255, 255);
   transition: 3.5ms ease-in-out;
 }
 
@@ -140,4 +146,12 @@ a {
     100% {
         box-shadow: 0 0 20px 0 #ff8827
     }
+}
+
+.footerlink{
+  font-size: 14px;
+}
+
+.f1{
+    font-size: 16px
 }
