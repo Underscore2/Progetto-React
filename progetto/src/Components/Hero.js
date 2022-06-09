@@ -1,16 +1,14 @@
 import React from "react";
 import text from "../utilities/texts.json";
-import { Row, Col, Form, Button, Container } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
 import imgHero from "../images/hero.png";
-import ListsImg from "../images/grafico.png";
 
-class Hero extends React.Component {
-  render() {
+export  default function Hero(){
     return (
       <div>
         {text.map((item) => {
           return (
-            <div className="container-sm py-3">
+            <section className="container-sm py-3">
               <Row className=" white-modules w-100 m-0 py-3 justify-content-center align-items-center px-4 m-0 w-100">
                 <Col xs={12} lg={6} className="order-1 py-2 my-3 order-lg-0">
                   <h1 className="fw-bold py-2 m-0 f-title font-primary">
@@ -49,55 +47,11 @@ class Hero extends React.Component {
                   <img className="hero p-4 me-lg-5" src={imgHero} alt=""></img>
                 </Col>
               </Row>
-              <div className="d-flex flex-column justify-content-center align-items-center mt-5">
-                <h1 className="font-primary">{item.list1.title}</h1>
-                <h2 className="font-primary">{item.list1.subtitle}</h2>
-                <img className="w-100" src={ListsImg} alt=""></img>
-              </div>
-              <div>
-                <Row>
-                  <Col lg={6}>
-                    <ul>
-                      <li className="font-primary mt-5 h3 color-orange">
-                        {item.list1.l1}
-                      </li>
-                      <li className="font-primary mt-4 h3 font-secondary">
-                        {item.list1.l2}
-                      </li>
-                      <li className="font-primary mt-4 h3">{item.list1.l3}</li>
-                      <li className="font-primary mt-4 h3 color-orange">
-                        {item.list1.l4}
-                      </li>
-                      <li className="font-primary mt-4 h3 font-secondary">
-                        {item.list1.l5}
-                      </li>
-                      <li className="font-primary mt-4 h3">{item.list1.l6}</li>
-                      <li className="font-primary mt-4 h3 color-orange">
-                        {item.list1.l7}
-                      </li>
-                      <li className="font-primary mt-4 h3 font-secondary">
-                        {item.list1.l8}
-                      </li>
-                    </ul>
-                  </Col>
-                  <Col xs={12} lg={6}>
-                    <div className="d-flex flex-column mt-5">
-                      <h1 className="font-primary font-secondary">
-                        {item.list1.rightList}
-                      </h1>
-                      <h1 className="font-primary fw-bold ">
-                        {item.list1.rightList2}
-                      </h1>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
-            </div>
+
+
+            </section>
           );
         })}
       </div>
-    );
-  }
+    )
 }
-
-export default Hero;

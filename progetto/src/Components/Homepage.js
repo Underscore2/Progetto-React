@@ -1,12 +1,18 @@
 import React from "react";
 import Hero from "./Hero.js";
+import Graphic from "./Graphic";
+import List from "./List";
+import Description from "./Description";
+import Cards from "./Cards";
 
-function Homepage() {
+export default function Homepage() {
   return (
     <>
-      <Hero />
+        <Hero />
+        <Graphic/>
+        <List/>
+        <Description/>
+        <Cards/>
     </>
-  );
+  )
 }
-
-export default Homepage;
