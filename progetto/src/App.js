@@ -7,6 +7,9 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./css/helper-class.css";
 import Layout from "./Components/Layout/Layout";
 import Login from "./Components/Login";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 function NoMatch() {
     return (
@@ -21,7 +24,7 @@ function NoMatch() {
 
 export default function App() {
   return (
-    <div className="App bgblack">
+    <div className="App">
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Homepage/>}/>

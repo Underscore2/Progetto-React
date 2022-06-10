@@ -9,7 +9,7 @@ export default function Footer(){
             <div>
                 {texts.map((item) => {
                     return (
-                        <div className='bgblack p-3 container-xxl'>
+                        <div className=' p-3 container-xxl'>
                             <Row className='m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100'>
                                 <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2">
                                     <Link to="/" className="d-flex align-items-center">
