@@ -12,7 +12,7 @@ export default function Cards() {
                     <Card className="white-modules font-primary border-orange w-75">
                         <Card.Body className="py-3 d-flex flex-column justify-content-center align-items-center w-100 m-0">
                             <Card.Title className="py-1 text-center font-priamry"><h1> {item.pricingLeft.title}</h1></Card.Title>
-                            <Card.Title className="py-3  invisible text-center font-secondary"><h3>{item.pricingRight.subtitle}</h3></Card.Title>
+                            <Card.Title className="py-3 text-center font-secondary"><h3>{item.pricingLeft.subtitle}</h3></Card.Title>
 
                             <Card.Text className="py-3">
                                 <ul className="m-0 p-0 list-unstyled">
