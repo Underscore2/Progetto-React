@@ -1,7 +1,7 @@
 import React from "react";
-import text from "../../utilities/texts.json";
+import text from "../../../../utilities/texts.json";
 import { Row, Col, Form, Button } from "react-bootstrap";
-import imgHero from "../../images/hero.png";
+
 
 class Hero extends React.Component{
   render(){
@@ -45,7 +45,7 @@ class Hero extends React.Component{
                   lg={{ span: 5, offset: 1 }}
                   className="order-0 py-2 my-3 d-flex justify-content-center align-items-center order-lg-1"
                 >
-                  <img className="hero" src={imgHero} alt=""></img>
+                  <img className="hero" src={item.headerImg} alt=""></img>
                 </Col>
               </Row>
             </section>

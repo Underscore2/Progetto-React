@@ -1,7 +1,6 @@
 import React from "react";
 import texts from "../../utilities/texts.json";
 import { Col, Row } from "react-bootstrap";
-import logo from "../../images/egg-fill.svg";
 import {Link} from "react-router-dom";
 
 export default function Footer(){
@@ -14,7 +13,7 @@ export default function Footer(){
                                 <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2">
                                     <Link to="/" className="d-flex align-items-center">
                                         <img
-                                            src={logo}
+                                            src={item.navbarLogo}
                                             alt="logo"
                                             style={{ width: "50px", height: "auto" }}
                                         ></img>
@@ -25,16 +24,14 @@ export default function Footer(){
                                 </Col>
                                 <Col xs={12} md={8} lg={6} xl={5} xxl={4} className='my-3'>
                                     <Row className="d-flex w-100 p-0 m-0">
-                                        {
-                                            texts.map((item) => {
-                                                return (item.footer.footerLinks.map((element, index) => {
+                                        {item.footer.footerLinks.map((element, index) => {
                                                     return (
                                                         <Col key={index} xs={12} sm={4} className="d-flex justify-content-start justify-content-sm-center justify-content-lg-end align-items-center p-0">
-                                                            <Link to="/" key={index} hreft="#" className=" my-1 mx-1 link footerlink font-secondary">
+                                                            <Link key={index+"link"} to="/"  hreft="#" className=" my-1 mx-1 link footerlink font-secondary">
                                                                 {element}
                                                             </Link>
                                                         </Col >)
-                                                }))
+                                                
                                             })
                                         }
                                     </Row>

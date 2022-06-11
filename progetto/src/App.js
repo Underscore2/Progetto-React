@@ -1,15 +1,14 @@
-import Homepage from "./Components/Body/Homepage.js";
-import Dashboard from "./Components/Dashboard/Dashboard";
+import Homepage from "./Components/Body/Homepage/Homepage.js";
+import Dashboard from "./Components/Body/Dashboard/Dashboard";
 import { Link, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./css/helper-class.css";
 import Layout from "./Components/Layout/Layout";
-import Login from "./Components/Login";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-AOS.init();
+import Login from "./Components/Header/Login";
+
+
 
 function NoMatch() {
     return (
@@ -24,7 +23,7 @@ function NoMatch() {
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App backg-black">
         <Routes>
             <Route path="/" element={<Layout />}>
                 <Route index element={<Homepage/>}/>

@@ -4,10 +4,10 @@ import Navbar from "../Header/Navbar";
 
 export default function Layout() {
     return (
-        <>
+        <div>
             <Navbar/>
 
             <Footer/>
-        </>
+        </div>
     )
 }
