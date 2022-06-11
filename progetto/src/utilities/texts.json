@@ -1,10 +1,13 @@
 [
-  {
-    "headerImg": "oLogo.89f9797f.png",
+  {"navbarHamburger":"/images/cell.svg",
+    "headerImg": "/images/hero.png",
+    "navbarLogo":"/images/egg-fill.svg",
+    "grafico":"/images/grafico.jpg",
     "title": "THE ONLY DONE FOR YOU OPTION PICKER",
     "subtitle": "Get trade alerts. Cancel anytime.",
     "preform": "Enter your email to create or restart your membership",
     "Navbar": ["Features", "Pricing", "Login", "Sign up"],
+
     "schema": [
       {
         "title": "Why us?",

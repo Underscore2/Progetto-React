@@ -1,14 +1,14 @@
 import {Row, Col, Button} from "react-bootstrap";
 import React from "react";
 import {Link, Outlet} from "react-router-dom";
-import logo from "../../images/egg-fill.svg";
-import hamburger from "../../images/cell.svg"
+import text from '../../utilities/texts.json'
 export default function Navbar(){
     return (
+
       <div className="container-xxl p-3 gradient-background">
         <Row className="m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100">
           <Col className="p-1 align-items-center justify-content-around flex-sm-row" xs={8} sm={9} md={7}>
-            <img src={logo} className="uovo" style={{ width: "50px", height: "auto" }} alt="logo" />
+            <img src={text.map(item=>item.navbarLogo)} className="uovo" style={{ width: "50px", height: "auto" }} alt="logo" />
             <Link className="text-decoration-none font-secondary " to={"/"}>
               LMAO Corporation
             </Link>
@@ -26,7 +26,7 @@ export default function Navbar(){
               </li>
             </ul>
             <a className='d-flex justify-content-center d-md-none' href="!#">
-            <img src={hamburger} width='50px' height='auto' className=''></img>
+            <img src={text.map(item=>item.navbarHamburger)} width='50px' height='auto' className=''></img>
             </a>
           </Col>
         </Row>
