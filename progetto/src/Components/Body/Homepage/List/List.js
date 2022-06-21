@@ -14,11 +14,11 @@ export default function List() {
                   <>
                     <li
                       key={index}
-                      className={index % 2 ? "mt-3 font-secondary h4" :  index % 3 ? "font-primary mt-3 h4": "color-orange mt-3 h4"}
+                      className={index % 2 ? "mt-3 font-secondary h4" : index % 3 ? "font-primary mt-3 h4" : "color-orange mt-3 h4"}
                     >
                       {point.li}
                     </li>
-                    </>
+                  </>
                 );
               })}
             </ul>

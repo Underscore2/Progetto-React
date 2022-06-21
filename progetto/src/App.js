@@ -7,9 +7,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./css/helper-class.css";
 import Layout from "./Components/Layout/Layout";
 import Login from "./Components/Header/Login";
-
-
-
+import PrivateRoute from "./Components/PrivateRoute"
 function NoMatch() {
     return (
         <div>
@@ -22,20 +20,30 @@ function NoMatch() {
 }
 
 export default function App() {
-  return (
-    <div className="App backg-black">
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Homepage/>}/>
-                <Route path="/dashboard" element={<Dashboard/>}/>
-                <Route path="/login" element={<Login/>}/>
 
-                {/* Using path="*"" means "match anything", so this route
+    return (
+        <div className="App backg-black">
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Homepage />} />
+                    <Route path="/login" element={<Login />} />
+
+
+                    {/* Using path="*"" means "match anything", so this route
                 acts like a catch-all for URLs that we don't have explicit
                 routes for.*/}
-                <Route path="*" element={<NoMatch/>}/>
-            </Route>
-        </Routes>
-    </div>
-  );
+
+                    <Route path="*" element={<NoMatch />} />
+                </Route>
+
+                <Route element={<PrivateRoute />}>
+                    <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="/" element={<Layout />}>
+                        <Route path="/homepage" element={<Homepage />} />
+                    </Route>
+                </Route>
+
+            </Routes>
+        </div>
+    );
 }
