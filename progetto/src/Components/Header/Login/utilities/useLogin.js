@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
 import { modalSlice,usersSlice } from "../../../../states/stateLogin";
+import { encrypt  } from "../../../../utilities/encrypt";
 export default function useLogin() {
     const dispatch=useDispatch()
     const navigate = useNavigate();
@@ -21,10 +22,10 @@ export default function useLogin() {
     }
 
     function storagePush() {
-        localStorage.setItem("email", email)
-        localStorage.setItem("password", password)
+        localStorage.setItem("email", encrypt(email))
+        localStorage.setItem("password", encrypt(password))
         setLogin(dispatch(modalSlice.actions.inactive()))
-        dispatch(usersSlice.actions.add({email: email, password: password, authorized:true}))
+        dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
         setEmail("")
         setPassword("")
 

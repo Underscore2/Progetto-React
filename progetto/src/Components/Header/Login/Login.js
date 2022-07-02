@@ -26,17 +26,22 @@ export default function Login() {
                                 type="email"
                                 name='email'
                                 value={email}
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                required
                                 placeholder="name@example.com"
                                 autoFocus
                             />
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label for="validationDefault02">Password</Form.Label>
                             <Form.Control
+                            id="validationDefault02"
                                 onChange={handlePassword}
                                 name='password'
                                 type="password"
                                 value={password}
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                required
                                 placeholder="password"
                             />
                         </Form.Group>
@@ -46,7 +51,7 @@ export default function Login() {
                     <Button variant="secondary" onClick={handleClose}>
                         Close
                     </Button>
-                    <Button variant="bg-orange" onClick={storagePush}>
+                    <Button type="submit" variant="bg-orange" onClick={storagePush}>
                         Login
                     </Button>
                 </Modal.Footer>

@@ -6,14 +6,13 @@
         // Override our default settings just for this directory
         "eqeqeq": "off",
         "strict": "off",
-        "aspects": [ "noHref", "invalidHref", "preferButton" ],
-        "no-unused-vars":"off",
+     
+        "no-unused-vars":0,
         "jsx-a11y/anchor-is-valid": [
             "error",
             {
               "components": ["Link"],
               "specialLink": ["hrefLeft", "hrefRight"],
-              "aspects": ["noHref", "invalidHref", "preferButton"]
             }
           ]
     }
