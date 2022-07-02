@@ -1,8 +1,14 @@
 import React, { useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { store } from "../../../states/Store";
-const logged = store.getState().users.map((user=>user.status==="authorized"));
 export default function Dashboard() {
+
+   let logged = false;
+
+   store.getState().users.map((user =>
+      user.authorized === true
+    ? logged = true : logged = false))
+
 
    if (logged) {
     return (

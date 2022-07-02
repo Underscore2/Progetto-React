@@ -24,7 +24,7 @@ export default function useLogin() {
         localStorage.setItem("email", email)
         localStorage.setItem("password", password)
         setLogin(dispatch(modalSlice.actions.inactive()))
-        dispatch(usersSlice.actions.add({email: email, password: password, status:'authorized'}))
+        dispatch(usersSlice.actions.add({email: email, password: password, authorized:true}))
         setEmail("")
         setPassword("")
 

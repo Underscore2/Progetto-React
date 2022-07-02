@@ -13,6 +13,7 @@ export const usersSlice=createSlice({
     name:'users',
     initialState:[],
     reducers:{
-        add: (state,action)=> [...state,action.payload]
+        add: (state,action)=> [...state,action.payload],
+        reset:(state,action)=> state = []
     }
 })

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { modalSlice } from "../../../../states/stateLogin";
+import { modalSlice, usersSlice } from "../../../../states/stateLogin";
 import { store } from "../../../../states/Store";
 export default function useNavbar() {
     const dispatch= useDispatch()
@@ -13,6 +13,7 @@ export default function useNavbar() {
         return (
            
             localStorage.clear(),
+            dispatch(usersSlice.actions.reset()),
             setRefresh(c=>!c)
 
         )

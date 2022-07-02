@@ -11,7 +11,4 @@ export const store = configureStore({
     }
 })
 
-store.subscribe(()=>{
-    return console.log(store.getState())
-})
 

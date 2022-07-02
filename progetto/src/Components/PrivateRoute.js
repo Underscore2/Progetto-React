@@ -1,9 +1,13 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { store } from "../states/Store";
 
-const logged = store.getState().users.map((user => user.status === "authorized"))
 
+let logged = false;
 export default function protectRoute(children) {
+    store.getState().users.map((user =>
+        user.authorized === true
+      ? logged = true : logged = false))
+
 
     if (logged) {
 
