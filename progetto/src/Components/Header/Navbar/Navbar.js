@@ -1,19 +1,18 @@
 import { Row, Col, } from "react-bootstrap";
 import React from "react";
-import { createContext } from "react";
 import { Link } from "react-router-dom";
 import text from '../../../utilities/texts.json'
 import Login from "../Login/Login";
 import useNavbar from "./utilities/useNavbar";
-export const loginContext = createContext()
-
+import { store } from "../../../states/Store";
 
 export default function Navbar() {
-  const {
-    password, user,
-    loginStatusChanger, setLoginStatusChanger,
-    logout, loginHandler
-  } = useNavbar()
+
+const {
+  password, user,
+  logout, loginHandler,login
+  ,setRefresh,itIsLogged
+} = useNavbar()
 
 
   return (
@@ -57,9 +56,7 @@ export default function Navbar() {
           </a>
         </Col>
       </Row>
-      <loginContext.Provider value={{ loginStatusChanger, setLoginStatusChanger }}>
         <Login />
-      </loginContext.Provider>
     </div>
   )
 }

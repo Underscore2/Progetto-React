@@ -7,6 +7,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./css/helper-class.css";
 import Layout from "./Components/Layout/Layout";
 import PrivateRoute from "./Components/PrivateRoute"
+import { Provider } from "react-redux";
+import { store } from "./states/Store.js";
 
 function NoMatch() {
     return (
@@ -23,6 +25,7 @@ function NoMatch() {
 
 export default function App() {
     return (
+        <Provider store={store}>
         <div className="App backg-black">
             <Routes>
                 <Route path="/" element={<Layout />}>
@@ -37,5 +40,6 @@ export default function App() {
 
             </Routes>
         </div>
+        </Provider>
     );
 }

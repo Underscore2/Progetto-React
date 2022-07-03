@@ -1,46 +1,62 @@
-import { useState, useRef, useContext } from "react"
+import { useState, } from "react"
 import { useNavigate } from "react-router-dom";
-import { loginContext } from "../../Navbar/Navbar";
+import { useDispatch } from "react-redux";
+import { store } from "../../../../states/Store";
+import { modalSlice,usersSlice } from "../../../../states/stateLogin";
+import { encrypt  } from "../../../../utilities/encrypt";
 export default function useLogin() {
-    const passwordRef = useRef('password')
-    const emailRef = useRef('email')
+    const dispatch=useDispatch()
     const navigate = useNavigate();
+    const [login,setLogin]=useState(store.getState().modal)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { loginStatusChanger, setLoginStatusChanger } = useContext(loginContext)
-
-
-    function handleEmail() {
-        setEmail(emailRef.current.value)
-        console.log("email: ", email)
+    const [refresh, setRefresh] = useState(false)
+    const inptEmail = document.querySelector('#email');
+    const inptPassword = document.querySelector('#password');
+  
+    function handleEmail(event) {
+        setEmail(event.target.value)
 
     }
 
-    function handlePassword() {
-        setPassword(passwordRef.current.value)
-        console.log("password: ", password)
+    function handlePassword(event) {
+        setPassword(event.target.value)
     }
 
-    function storagePush() {
-
-        localStorage.setItem("email", email)
-        localStorage.setItem("password", password)
-
-        navigate("/")
-        window.location.reload(true)
-
-        return setLoginStatusChanger(false)
+    function storagePush(event) {
+        if(event.target.innerHTML==="testDev"){
+            console.log(event.target.innerHTML)
+            localStorage.setItem("email", encrypt(email))
+            localStorage.setItem("password", encrypt(password))
+            setLogin(dispatch(modalSlice.actions.inactive()))
+            dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
+            setEmail("")
+            setPassword("")
+        }
+        if((inptEmail.checkValidity() && inptPassword.checkValidity()) ){
+        localStorage.setItem("email", encrypt(email))
+        localStorage.setItem("password", encrypt(password))
+        setLogin(dispatch(modalSlice.actions.inactive()))
+        dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
+        setEmail("")
+        setPassword("")
+    }
+    else{
+        console.log(inptEmail.checkValidity())
+        console.log(inptPassword.checkValidity())
+    }
     }
 
     function handleClose() {
-        console.log("Mi sto chiudendo")
-        return setLoginStatusChanger(false)
+       setLogin(dispatch(modalSlice.actions.inactive()))
+       setEmail('')
+       setPassword('')
+
     };
 
     return {
         handleEmail, handlePassword,
         storagePush, handleClose,
-        emailRef, passwordRef,
-        loginStatusChanger
+        email,password,
     }
 }
