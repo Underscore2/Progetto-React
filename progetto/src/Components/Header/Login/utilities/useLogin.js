@@ -11,6 +11,8 @@ export default function useLogin() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [refresh, setRefresh] = useState(false)
+    const inptEmail = document.querySelector('#email');
+    const inptPassword = document.querySelector('#password');
   
     function handleEmail(event) {
         setEmail(event.target.value)
@@ -21,14 +23,28 @@ export default function useLogin() {
         setPassword(event.target.value)
     }
 
-    function storagePush() {
+    function storagePush(event) {
+        if(event.target.innerHTML==="testDev"){
+            console.log(event.target.innerHTML)
+            localStorage.setItem("email", encrypt(email))
+            localStorage.setItem("password", encrypt(password))
+            setLogin(dispatch(modalSlice.actions.inactive()))
+            dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
+            setEmail("")
+            setPassword("")
+        }
+        if((inptEmail.checkValidity() && inptPassword.checkValidity()) ){
         localStorage.setItem("email", encrypt(email))
         localStorage.setItem("password", encrypt(password))
         setLogin(dispatch(modalSlice.actions.inactive()))
         dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
         setEmail("")
         setPassword("")
-
+    }
+    else{
+        console.log(inptEmail.checkValidity())
+        console.log(inptPassword.checkValidity())
+    }
     }
 
     function handleClose() {
@@ -41,6 +57,6 @@ export default function useLogin() {
     return {
         handleEmail, handlePassword,
         storagePush, handleClose,
-        email,password
+        email,password,
     }
 }
