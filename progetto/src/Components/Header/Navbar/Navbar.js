@@ -1,5 +1,5 @@
 import { Row, Col, } from "react-bootstrap";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import text from '../../../utilities/texts.json'
 import Login from "../Login/Login";
@@ -7,7 +7,9 @@ import useNavbar from "./utilities/useNavbar";
 import { store } from "../../../states/Store";
 
 export default function Navbar() {
-
+  useEffect(()=>{
+    console.log("Render Navbar")
+  },[])
 const {
   password, user,
   logout, loginHandler,login
@@ -20,7 +22,7 @@ const {
     <div className="container-xxl p-3 gradient-background">
       <Row className="m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100">
         <Col className="p-1 align-items-center justify-content-around flex-sm-row" xs={8} sm={9} md={7}>
-          <img src={text.map(item => item.navbarLogo)} className="uovo" style={{ width: "50px", height: "auto" }} alt="logo" />
+          <img src={text.map(item => item.navbarLogo)} className="uovo" width="50px" height="50px" alt="logo" />
           <Link className="text-decoration-none font-secondary " to={"/"}>
             LMAO Corporation
           </Link>
@@ -52,7 +54,7 @@ const {
               </li>}
           </ul>
           <a className='d-flex justify-content-center d-md-none' href="!#">
-            <img src={text.map(item => item.navbarHamburger)} width='50px' height='auto' className='' alt=''></img>
+            <img src={text.map(item => item.navbarHamburger)} width='50px' height="50px" className='' alt=''></img>
           </a>
         </Col>
       </Row>

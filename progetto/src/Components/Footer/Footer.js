@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import texts from "../../utilities/texts.json";
 import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+    useEffect(()=>{
+        console.log("Render Footer")
+    },[])
     return (
         <div>
             {texts.map((item) => {
@@ -15,7 +18,7 @@ export default function Footer() {
                                     <img
                                         src={item.navbarLogo}
                                         alt="logo"
-                                        style={{ width: "50px", height: "auto" }}
+                                        style={{ width: "50px", height: "50px" }}
                                     ></img>
                                     <p className="font-secondary link m-0 f1 mt-2">
                                         {item.footer.subtitle}

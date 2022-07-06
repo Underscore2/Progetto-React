@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import text from "../../../../utilities/texts.json";
 
 export default function List() {
+  useEffect(()=>{
+    console.log("Render List")
+  },[])
   return text.map((item) => {
     return (
       <section className="container-xxl py-3 ">

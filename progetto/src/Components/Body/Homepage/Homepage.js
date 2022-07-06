@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "./Hero/Hero.js";
 import Graphic from "./Graphic/Graphic.js";
 import List from "./List//List";
@@ -7,6 +7,9 @@ import Cards from "./Cards/Cards.js";
 
 
 export default function Homepage() {
+  useEffect(()=>{
+    console.log("Render Homepage")
+  },[])
   return (
     <div className="backg-black">
        

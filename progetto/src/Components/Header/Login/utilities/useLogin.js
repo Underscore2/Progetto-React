@@ -32,6 +32,7 @@ export default function useLogin() {
             dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
             setEmail("")
             setPassword("")
+            console.log(process.env.REACT_APP_ENCRYPT_KEY)
         }
         if((inptEmail.checkValidity() && inptPassword.checkValidity()) ){
         localStorage.setItem("email", encrypt(email))

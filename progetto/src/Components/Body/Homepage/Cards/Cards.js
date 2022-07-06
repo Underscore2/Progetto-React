@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {Card, Button, Col, Row} from "react-bootstrap";
 import text from "../../../../utilities/texts.json";
 
 export default function Cards() {
+useEffect(()=>{
+    console.log("Render cards")
+})
     return(
         text.map((item) =>{
             return(

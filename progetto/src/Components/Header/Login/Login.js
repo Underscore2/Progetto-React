@@ -4,7 +4,9 @@ import useLogin from "../Login/utilities/useLogin.js";
 import { store } from "../../../states/Store.js";
 
 export default function Login() {
-
+useEffect(()=>{
+    console.log("Render Login")
+})
     const {
         handleEmail, handlePassword,
         storagePush, handleClose,

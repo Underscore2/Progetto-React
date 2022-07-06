@@ -123,9 +123,7 @@ a {
 }
 
 .hero {
-    max-width: 115%;
-    max-height: 115%;
-    display: block;
+  aspect-ratio: attr(width) / attr(height);
 }
 
 .desc-img {

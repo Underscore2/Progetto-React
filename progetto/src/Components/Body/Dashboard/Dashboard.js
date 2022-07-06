@@ -4,7 +4,9 @@ import { store } from "../../../states/Store";
 export default function Dashboard() {
 
    let logged = false;
-
+useEffect(()=>{
+   console.log("Render Dashboard")
+},[])
    store.getState().users.map((user =>
       user.authorized === true
     ? logged = true : logged = false))
