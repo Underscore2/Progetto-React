@@ -4,7 +4,6 @@ import { Link, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
-import "./css/helper-class.css";
 import Layout from "./Components/Layout/Layout";
 import PrivateRoute from "./Components/PrivateRoute"
 import { Provider } from "react-redux";
@@ -26,7 +25,7 @@ function NoMatch() {
 export default function App() {
     return (
         <Provider store={store}>
-        <div className="App backg-black">
+        <div className="App">
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Homepage />} />

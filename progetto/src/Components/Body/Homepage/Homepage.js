@@ -11,8 +11,7 @@ export default function Homepage() {
     console.log("Render Homepage")
   },[])
   return (
-    <div className="backg-black">
-       
+    <div className="p-0">
         <Hero />
         <Description/>
         <Graphic/>
