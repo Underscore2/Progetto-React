@@ -1,0 +1,12 @@
+.bg-hero {
+  background-image: url("../../public/images/bg-blue.png");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-size: 80px;
+}
+
+/*# sourceMappingURL=_hero.css.map */

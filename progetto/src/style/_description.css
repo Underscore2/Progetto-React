@@ -1,0 +1,17 @@
+.info-style {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px 12px #c7c1c9;
+  background-color: rgba(255, 255, 255, 0.501);
+  max-width: 270px;
+  max-height: 450px;
+}
+
+.bg-description {
+  border-top: 1px solid black;
+  background-image: url("../../public/images/bg-violet.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/*# sourceMappingURL=_description.css.map */

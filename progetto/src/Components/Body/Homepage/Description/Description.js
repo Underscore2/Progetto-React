@@ -15,7 +15,7 @@ export default function Description() {
   return (
     text.map((json,key) => {
       return(
-        <section className="bg-prova" key={key+'section'}>
+        <section className="bg-description" key={key+'section'}>
           <Row key={key+'row'} className="h-100 d-flex justify-content-center w-100">
               {json.schema.map((item)=>{
                   {console.log(item)}

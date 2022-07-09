@@ -19,6 +19,7 @@
     "react-scripts": "^5.0.1",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
+    "sass": "^1.53.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,8 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "sass-app":"sass --watch src/App.scss  src/App.css",
-    "sass-description":"sass --watch src/scss/description.scss src/Components/Body/Homepage/Description/description.css"
+    "sass-app": "sass --watch src/style/App.scss  src/style/App.css"
   },
   "eslintConfig": {
     "extends": [

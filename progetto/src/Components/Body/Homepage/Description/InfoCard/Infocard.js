@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 
 export default function Infocard({title,sphere, subtitle, image}){
     return(
-        <Col className="m-3 offset-3 col-3 d-flex justify-content-center">
+        <Col className=" p-5   col-4 d-flex justify-content-center">
           <div className="info-style w-100 d-flex flex-column align-items-center justify-content-center py-2 px-3">
             <h2 className="text-center">{title}</h2>
             <img src={sphere} width={80} height={80} alt="" ></img>

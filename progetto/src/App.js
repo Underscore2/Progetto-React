@@ -1,13 +1,15 @@
 import Homepage from "./Components/Body/Homepage/Homepage.js";
 import Dashboard from "./Components/Body/Dashboard/Dashboard";
 import { Link, Routes, Route } from "react-router-dom";
-import "./App.css";
+import "./style/App.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Layout from "./Components/Layout/Layout";
 import PrivateRoute from "./Components/PrivateRoute"
 import { Provider } from "react-redux";
 import { store } from "./states/Store.js";
+import Description from "./Components/Body/Homepage/Description/Description.js";
+import List from "./Components/Body/Homepage/List/List.js";
 
 function NoMatch() {
     return (
@@ -29,8 +31,15 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Homepage />} />
+                    <Route path="/info" element={<Description/>}/>
+                    <Route path="/pricing" element={<List/>}/>
                 </Route>
+                
+
                 <Route path="*" element={<NoMatch />} />
+
+
+
                 <Route element={<PrivateRoute />}>
                     <Route path="/" element={<Layout />}>
                         <Route path="/dashboard" element={<Dashboard />} />

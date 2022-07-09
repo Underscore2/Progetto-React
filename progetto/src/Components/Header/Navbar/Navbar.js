@@ -4,17 +4,16 @@ import { Link } from "react-router-dom";
 import text from '../../../utilities/texts.json'
 import Login from "../Login/Login";
 import useNavbar from "./utilities/useNavbar";
-import { store } from "../../../states/Store";
 
 export default function Navbar() {
-  useEffect(()=>{
+  useEffect(() => {
     console.log("Render Navbar")
-  },[])
-const {
-  password, user,
-  logout, loginHandler,login
-  ,setRefresh,itIsLogged
-} = useNavbar()
+  }, [])
+  const {
+    password, user,
+    logout, loginHandler, login
+    , setRefresh, itIsLogged
+  } = useNavbar()
 
 
   return (
@@ -35,9 +34,7 @@ const {
             {user && password ? <li>
               <Link className="text-decoration-none px-2" to={"/dashboard"}>Dashboard</Link>
             </li> : null}
-            <li>
-              <Link className="text-decoration-none px-2" to={"pricing"}>Pricing</Link>
-            </li>
+            
             {user && password ?
               <li>
                 <Link className="text-decoration-none px-2" onClick={logout} replace to={'/'}>Log Out</Link>
@@ -48,17 +45,26 @@ const {
               </li>
             }
             {user && password ?
-              null :
-              <li>
-                <Link className="text-decoration-none px-2" to={"signup"}>Sign Up</Link>
-              </li>}
+              null : 
+              <>
+                <li>
+                  <Link className="text-decoration-none px-2" to={"signup"}>Sign Up</Link>
+                </li>
+                <li>
+                  <Link className="text-decoration-none px-2" to={"/info"}>Service</Link>
+                </li>
+                <li>
+              <Link className="text-decoration-none px-2" to={"/pricing"}>Pricing</Link>
+            </li>
+              </>
+            }
           </ul>
           <a className='d-flex justify-content-center d-md-none' href="!#">
             <img src={text.map(item => item.navbarHamburger)} width='50px' height="50px" className='' alt=''></img>
           </a>
         </Col>
       </Row>
-        <Login />
+      <Login />
     </div>
   )
 }
