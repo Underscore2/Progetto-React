@@ -13,9 +13,9 @@ function Hero() {
         return (
           <section className="bg-hero hero-container ">
             <Row className="p-0 m-0">
-              <Col className="col-6 d-flex justify-content-end p-5"> <h1 className=" m-0 hero-title w-100">{item.title}</h1></Col>
-              <Col className="col-6 d-flex justify-content-end p-5">
-                <img src={item.iphoneMockup} width={340} height={666}></img>
+              <Col className="col-8 d-flex justify-content-end p-5"> <h1 className=" m-0 hero-title w-100">{item.title}</h1></Col>
+              <Col className="col-4 d-flex justify-content-end p-5">
+                <img src={item.iphoneMockup} width={350} height={690}></img>
               </Col>
             </Row>
           </section>

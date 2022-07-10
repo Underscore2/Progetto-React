@@ -13,10 +13,7 @@ export default function Homepage() {
   return (
     <div className="p-0">
         <Hero />
-        <Description/>
-        <Graphic/>
-        <List/>
-        <Cards/>
+       
       
     </div>
   )

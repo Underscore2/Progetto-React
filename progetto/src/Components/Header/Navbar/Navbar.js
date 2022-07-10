@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
 
-    <div className="p-3 border-blue">
+    <div className="p-1 border-blue">
       <Row className="m-0 py-3 justify-content-center align-items-center px-2 m-0 w-100">
         <Col className="p-1 align-items-center justify-content-around flex-sm-row" xs={8} sm={9} md={7}>
           <img src={text.map(item => item.navbarLogo)} className="uovo" width="50px" height="50px" alt="logo" />
@@ -41,7 +41,7 @@ export default function Navbar() {
               </li>
               :
               <li>
-                <Link className="text-decoration-none px-2" to={'/'}><span onClick={loginHandler}>Login</span></Link>
+                <span onClick={loginHandler}>Login</span>
               </li>
             }
             {user && password ?
