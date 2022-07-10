@@ -1,13 +1,18 @@
 import React, { useEffect } from "react";
 import {Card, Button, Col, Row} from "react-bootstrap";
+import Pricing from "../../../../utilities/interfaces";
 import text from "../../../../utilities/texts.json";
 
 export default function Cards() {
-useEffect(()=>{
+
+useEffect(():void=>{
     console.log("Render cards")
 })
+
+
+
     return(
-        text.map((item) =>{
+        text.map((item:Pricing)=>{
             return(
                 <section className="container-xxl py-3">
                     <Row>

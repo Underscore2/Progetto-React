@@ -1,6 +1,8 @@
+import React from "react";
 import { Col } from "react-bootstrap";
-
-export default function Infocard({title,sphere, subtitle, image}){
+import InfocardTS from "../../../../../utilities/interfaces"
+ 
+export default function Infocard({title,sphere, subtitle, image}:InfocardTS){
     return(
         <Col className=" p-5   col-4 d-flex justify-content-center">
           <div className="info-style w-100 d-flex flex-column align-items-center justify-content-center py-2 px-3">
