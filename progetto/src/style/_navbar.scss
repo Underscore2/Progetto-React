@@ -1,0 +1,48 @@
+/* *{outline: 1px solid red;}
+ */
+.highnav-vh{
+    height: 10vh;
+    background-color: #0062b1;
+}
+
+.navbar-title{
+    color: white;
+}
+.side-nav{
+    height: 90vh;
+    width: 20vw;
+}
+
+.side-nav-color{
+    background-color: #e7eaeb;
+}
+
+.side-nav-links{
+    background-color: white;
+    border-left: 10px solid #0062b1;
+}
+
+.newsletter{
+    background-color: #0062b1 ;
+    border: 4px solid white;
+    color:white;
+}
+
+.newsletter2{
+    transform: rotate(90deg);
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0);
+    color:white;
+    border:none;
+}
+
+.description{
+    color: #0062b1;
+}
+
+.join{
+    background-color: white;
+    color: #0062b1;
+    border: 1px solid #0062b1;
+    border-radius: 10px;
+}

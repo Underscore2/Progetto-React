@@ -1,5 +1,6 @@
 @use "description";
 @use "hero";
+@use "navbar";
 ;/*-------------------------------------------MISCELLANEOUS----------------------------------------*/
 /* *{outline:1px solid red};
  */
@@ -38,5 +39,17 @@
   border: 1px solid #006ab3;
   background-color: white;
 }
+
+.link{
+  color:white;
+  cursor: pointer;
+  :hover{
+    color:white;
+    text-decoration: none;
+   }
+}
+
+
+
 
 /*# sourceMappingURL=App.css.map */

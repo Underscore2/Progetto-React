@@ -8,7 +8,7 @@ function Hero() {
     console.log("Render Hero")
   }, [])
   return (
-    <div className=" ">
+    <div className="">
       {text.map((item, index) => {
         return (
           <section className="bg-hero hero-container ">

@@ -7,11 +7,9 @@ export default function Layout() {
         console.log("Render Layout")
     },[])
     return (
-        <div>
+        <>
             <Navbar />
-            <Outlet />
-            <Footer />
-        </div>
+        </>
     )
 }
 
