@@ -5,6 +5,8 @@ import "./style/App.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import Layout from "./Components/Layout/Layout";
+import Navbar from "./Components/Header/Navbar/Navbar.js";
+import Hero from "./Components/Body/Homepage/Hero/Hero.js";
 import PrivateRoute from "./Components/PrivateRoute"
 import { Provider } from "react-redux";
 import { store } from "./states/Store.js";
@@ -27,10 +29,10 @@ function NoMatch() {
 export default function App() {
     return (
         <Provider store={store}>
-        <div className="App">
+        <div className="App container-xxl p-0">
             <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Homepage />} />
+                <Route path="/" element={<Navbar />}>
+                    <Route index element={<Hero />} />
                     <Route path="/info" element={<Description/>}/>
                     <Route path="/pricing" element={<List/>}/>
                 </Route>

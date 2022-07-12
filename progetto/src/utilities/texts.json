@@ -8,6 +8,10 @@
     "subtitle": "Get trade alerts. Cancel anytime.",
     "preform": "Enter your email to create or restart your membership",
     "Navbar": ["Features", "Pricing", "Login", "Sign up"],
+    "homesvg":"/images/homepage.svg",
+    "contactsvg":"/images/customer-care.svg",
+    "pricingsvg":"/images/dollar-sign.svg",
+    "servicesvg":"/images/e-invoice.svg",
 
     "schema": [
       {

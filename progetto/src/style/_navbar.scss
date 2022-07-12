@@ -1,6 +1,6 @@
 /* *{outline: 1px solid red;}
  */
-.highnav-vh{
+ .highnav-vh{
     height: 10vh;
     background-color: #0062b1;
 }
@@ -20,6 +20,8 @@
 .side-nav-links{
     background-color: white;
     border-left: 10px solid #0062b1;
+    border-right: 10px solid #0062b1;
+    font-size: 22px;
 }
 
 .newsletter{
@@ -45,4 +47,19 @@
     color: #0062b1;
     border: 1px solid #0062b1;
     border-radius: 10px;
+}
+
+.join-button{
+    background-color: white;
+    color: #0062b1;
+    border: 1px solid #0062b1;
+    border-radius: 2rem;
+    font-size: 32px;
+    padding: 2% 10%;
+    max-width: 200px;
+    width: 100%;
+}
+
+.media-title{
+    font-size: 70px;
 }
