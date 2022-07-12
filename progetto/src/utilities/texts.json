@@ -12,6 +12,7 @@
     "contactsvg":"/images/customer-care.svg",
     "pricingsvg":"/images/dollar-sign.svg",
     "servicesvg":"/images/e-invoice.svg",
+    "usersvg":"/images/user-profile.svg",
 
     "schema": [
       {

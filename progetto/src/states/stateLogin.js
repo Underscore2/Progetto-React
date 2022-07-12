@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-export const modalSlice = createSlice({
-    name:'modal',
+export const loginSlice = createSlice({
+    name:'login',
     initialState:false,
     reducers:{
-        active : (state, action)=> state = true,
-        inactive : (state, action)=> state = false,
+        testDev : (state, action)=> state = true,
+        login : (state, action)=> state = true,
+        logout : (state,action)=>state=false
     }
 })
 

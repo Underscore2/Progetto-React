@@ -1,9 +1,9 @@
 import { useState, } from "react"
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { store } from "../../../../states/Store";
-import { modalSlice,usersSlice } from "../../../../states/stateLogin";
-import { encrypt  } from "../../../../utilities/encrypt";
+import { store } from "../../../states/Store";
+import { loginSlice,usersSlice } from "../../../states/stateLogin";
+import { encrypt  } from "../../../utilities/encrypt";
 export default function useLogin() {
     const dispatch=useDispatch()
     const navigate = useNavigate();
@@ -28,16 +28,17 @@ export default function useLogin() {
             console.log(event.target.innerHTML)
             localStorage.setItem("email", encrypt(email))
             localStorage.setItem("password", encrypt(password))
-            setLogin(dispatch(modalSlice.actions.inactive()))
+            setLogin(dispatch(loginSlice.actions.testDev()))
             dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
             setEmail("")
             setPassword("")
             console.log(process.env.REACT_APP_ENCRYPT_KEY)
+            
         }
         if((inptEmail.checkValidity() && inptPassword.checkValidity()) ){
         localStorage.setItem("email", encrypt(email))
         localStorage.setItem("password", encrypt(password))
-        setLogin(dispatch(modalSlice.actions.inactive()))
+        setLogin(dispatch(loginSlice.actions.login()))
         dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
         setEmail("")
         setPassword("")
@@ -48,16 +49,9 @@ export default function useLogin() {
     }
     }
 
-    function handleClose() {
-       setLogin(dispatch(modalSlice.actions.inactive()))
-       setEmail('')
-       setPassword('')
-
-    };
-
     return {
         handleEmail, handlePassword,
-        storagePush, handleClose,
+        storagePush,
         email,password,
     }
 }

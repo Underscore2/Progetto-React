@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import text from "../../../../utilities/texts.json";
 import { Row, Col, Form, Button } from "react-bootstrap";
-import Login from "../../../Header/Login/Login";
+import Login from "../../../Login/Login";
 import Footer from "../../../Footer/Footer"
 
 function Hero() {

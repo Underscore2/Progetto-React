@@ -1,7 +1,6 @@
 import { Button, Modal, Form, } from "react-bootstrap";
 import React, { useEffect } from "react";
 import useLogin from "../Login/utilities/useLogin.js";
-import { store } from "../../../states/Store.js";
 
 export default function Login() {
     useEffect(() => {
@@ -9,7 +8,7 @@ export default function Login() {
     })
     const {
         handleEmail, handlePassword,
-        storagePush, handleClose,
+        storagePush,
         email, password
     } = useLogin()
 
