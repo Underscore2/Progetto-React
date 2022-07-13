@@ -5,8 +5,8 @@ export const loginSlice = createSlice({
     initialState:false,
     reducers:{
         testDev : (state, action)=> state = true,
-        login : (state, action)=> state = true,
-        logout : (state,action)=>state=false
+        active : (state, action)=> state = true,
+        inactive : (state,action)=>state=false
     }
 })
 

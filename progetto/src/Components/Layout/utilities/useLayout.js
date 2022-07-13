@@ -13,7 +13,7 @@ export default function useNavbar() {
         return (
             localStorage.clear(),
             dispatch(usersSlice.actions.reset()),
-           dispatch(loginSlice.actions.logout())
+           dispatch(loginSlice.actions.inactive())
             
         )
     }

@@ -38,7 +38,7 @@ export default function useLogin() {
         if((inptEmail.checkValidity() && inptPassword.checkValidity()) ){
         localStorage.setItem("email", encrypt(email))
         localStorage.setItem("password", encrypt(password))
-        setLogin(dispatch(loginSlice.actions.login()))
+        setLogin(dispatch(loginSlice.actions.active()))
         dispatch(usersSlice.actions.add({email: encrypt(email), password: encrypt(password), authorized:true}))
         setEmail("")
         setPassword("")
