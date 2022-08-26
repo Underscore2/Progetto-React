@@ -25,12 +25,29 @@ export default function Login() {
     }
 
     function storagePush() {
-        localStorage.setItem("email", email)
-        localStorage.setItem("password", password)
-        navigate("/homepage")
-        setShow(false)
-    }
 
+       
+        fetch('http://localhost:3001/auth/signin',{
+            method:'POST',
+            headers: {
+                'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+            email:email,
+            password:password
+        })}).then((data)=>data.json()).then(data=>{if(data.authorized){
+            return(
+            console.log(data),
+            localStorage.setItem("email", email),
+            localStorage.setItem("password", password),
+            navigate("/homepage"),
+            setShow(false))
+        }else{
+            return(localStorage.clear(),
+            setPassword(""))
+        }}).catch(err=>console.error(err))
+    }
+    
     function handleClose() {
         setShow(false)
     };
