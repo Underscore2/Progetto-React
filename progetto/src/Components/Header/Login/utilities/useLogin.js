@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
-import { modalSlice, usersSlice } from "../../../../states/stateLogin";
+import { modalLoginSlice, usersSlice } from "../../../../states/stateLogin";
 import { encrypt } from "../../../../utilities/encrypt";
 export default function useLogin() {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export default function useLogin() {
       console.log(event.target.innerHTML);
       localStorage.setItem("email", encrypt(email));
       localStorage.setItem("password", encrypt(password));
-      setLogin(dispatch(modalSlice.actions.inactive()));
+      setLogin(dispatch(modalLoginSlice.actions.inactive()));
       dispatch(
         usersSlice.actions.add({
           email: encrypt(email),
@@ -56,21 +56,21 @@ export default function useLogin() {
               console.log(data),
               localStorage.setItem("email", encrypt(email)),
               localStorage.setItem("password", encrypt(password)),
-              setLogin(dispatch(modalSlice.actions.inactive())),
-              navigate("/homepage")
+              setLogin(dispatch(modalLoginSlice.actions.inactive())),
+              dispatch(
+                usersSlice.actions.add({
+                  email: encrypt(email),
+                  password: encrypt(password),
+                  authorized: true,
+                })
+              )
             );
           } else {
             return localStorage.clear(), setPassword("");
           }
         })
         .catch((err) => console.error(err));
-      dispatch(
-        usersSlice.actions.add({
-          email: encrypt(email),
-          password: encrypt(password),
-          authorized: true,
-        })
-      );
+      
       setEmail("");
       setPassword("");
     } else {
@@ -78,9 +78,8 @@ export default function useLogin() {
       console.log(inptPassword.checkValidity());
     }
   }
-
   function handleClose() {
-    setLogin(dispatch(modalSlice.actions.inactive()));
+    setLogin(dispatch(modalLoginSlice.actions.inactive()));
     setEmail("");
     setPassword("");
   }

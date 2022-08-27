@@ -1,34 +1,46 @@
 import { useState } from "react";
-import { useDispatch,useSelector } from "react-redux";
-import { modalSlice, usersSlice } from "../../../../states/stateLogin";
+import { useDispatch, useSelector } from "react-redux";
+import { modalLoginSlice, usersSlice } from "../../../../states/stateLogin";
+import { modalSignupSlice } from "../../../../states/stateSignUp"
 import { store } from "../../../../states/Store";
 export default function useNavbar() {
-    const dispatch= useDispatch()
+    const dispatch = useDispatch()
     const password = localStorage.getItem('password');
     const user = localStorage.getItem('email')
     const [refresh, setRefresh] = useState(false)
-    const itIsLogged=useSelector(()=> store.getState().modal)
+    const itIsLogged = useSelector(() => store.getState().modal)
 
     function logout() {
         return (
-           
+
             localStorage.clear(),
             dispatch(usersSlice.actions.reset()),
-            setRefresh(c=>!c)
+            setRefresh(c => !c)
 
         )
     }
 
     function loginHandler() {
         return (
-          dispatch(modalSlice.actions.active())
-             
+            setRefresh(c => !c),
+            dispatch(modalLoginSlice.actions.active())
+
         )
     }
 
+
+    function signUpHandler() {
+        return (
+            setRefresh(c => !c),
+            dispatch(modalSignupSlice.actions.active())
+
+        )
+    }
+
+
     return {
-        password, user,setRefresh,
-        logout,loginHandler,itIsLogged
+        password, user, setRefresh,
+        logout, loginHandler, itIsLogged, signUpHandler
     }
 
 
