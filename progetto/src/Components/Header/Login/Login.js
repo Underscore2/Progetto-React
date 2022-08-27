@@ -44,7 +44,6 @@ export default function Login() {
                                 name='password'
                                 type="password"
                                 value={password}
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                 required={true}
                                 placeholder="password"
                             />
