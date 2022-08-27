@@ -57,20 +57,20 @@ export default function useLogin() {
               localStorage.setItem("email", encrypt(email)),
               localStorage.setItem("password", encrypt(password)),
               setLogin(dispatch(modalLoginSlice.actions.inactive())),
-              dispatch(
-                usersSlice.actions.add({
-                  email: encrypt(email),
-                  password: encrypt(password),
-                  authorized: true,
-                })
-              )
+              navigate("/homepage")
             );
           } else {
             return localStorage.clear(), setPassword("");
           }
         })
         .catch((err) => console.error(err));
-      
+      dispatch(
+        usersSlice.actions.add({
+          email: encrypt(email),
+          password: encrypt(password),
+          authorized: true,
+        })
+      );
       setEmail("");
       setPassword("");
     } else {
@@ -78,6 +78,7 @@ export default function useLogin() {
       console.log(inptPassword.checkValidity());
     }
   }
+
   function handleClose() {
     setLogin(dispatch(modalLoginSlice.actions.inactive()));
     setEmail("");

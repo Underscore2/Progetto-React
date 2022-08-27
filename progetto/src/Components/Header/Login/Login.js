@@ -4,16 +4,11 @@ import useLogin from "../Login/utilities/useLogin.js";
 import { store } from "../../../states/Store.js";
 
 export default function Login() {
-
     const {
         handleEmail, handlePassword,
         storagePush, handleClose,
         email, password
     } = useLogin()
-
-
-
-
     return (
         <>
             <Modal show={store.getState().modalLogin} onHide={handleClose}>
@@ -48,10 +43,8 @@ export default function Login() {
                                 placeholder="password"
                             />
                         </Form.Group>
-
                     </Modal.Body>
                     <Modal.Footer>
-
                         <button type="submit" variant="bg-orange" onClick={storagePush} >
                             Login
                         </button>

@@ -1,12 +1,12 @@
-import Homepage from "./components/Body/Homepage/Homepage.js";
-import Dashboard from "./components/Body/Dashboard/Dashboard";
+import Homepage from "./Components/Body/Homepage/Homepage.js";
+import Dashboard from "./Components/Body/Dashboard/Dashboard";
 import { Link, Routes, Route } from "react-router-dom";
 import "./App.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.js";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "./css/helper-class.css";
-import Layout from "./components/Layout/Layout";
-import PrivateRoute from "./components/PrivateRoute"
+import Layout from "./Components/Layout/Layout";
+import PrivateRoute from "./Components/PrivateRoute"
 import { Provider } from "react-redux";
 import { store } from "./states/Store.js";
 
