@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit"
-import { modalSlice, usersSlice } from "./stateLogin"
+import { modalLoginSlice, usersSlice } from "./stateLogin"
+import { modalSignupSlice } from "./stateSignUp"
 
 
 
 export const store = configureStore({
     reducer:
     {
-        modal: modalSlice.reducer,
+        modalLogin: modalLoginSlice.reducer,
+        modalSignup: modalSignupSlice.reducer,
         users: usersSlice.reducer
     }
 })

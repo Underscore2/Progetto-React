@@ -5,14 +5,16 @@ import text from '../../../utilities/texts.json'
 import Login from "../Login/Login";
 import useNavbar from "./utilities/useNavbar";
 import { store } from "../../../states/Store";
+import SignUp from "../SignUp/SignUp";
 
 export default function Navbar() {
 
-const {
-  password, user,
-  logout, loginHandler,login
-  ,setRefresh,itIsLogged
-} = useNavbar()
+  const {
+    password, user,
+    logout, loginHandler, signUpHandler
+  } = useNavbar()
+
+
 
 
   return (
@@ -48,7 +50,7 @@ const {
             {user && password ?
               null :
               <li>
-                <Link className="text-decoration-none px-2 font-secondary" to={"signup"}>Sign Up</Link>
+                <Link className="text-decoration-none px-2 font-secondary" to={'/'}><span onClick={signUpHandler}>Sign Up</span></Link>
               </li>}
           </ul>
           <a className='d-flex justify-content-center d-md-none' href="!#">
@@ -56,7 +58,8 @@ const {
           </a>
         </Col>
       </Row>
-        <Login />
+      <Login />
+      <SignUp />
     </div>
   )
 }

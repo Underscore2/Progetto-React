@@ -10,13 +10,13 @@ export default function Login() {
         storagePush, handleClose,
         email, password
     } = useLogin()
-  
 
-   
+
+
 
     return (
         <>
-            <Modal show={store.getState().modal} onHide={handleClose}>
+            <Modal show={store.getState().modalLogin} onHide={handleClose}>
                 <Form>
                     <Modal.Header closeButton>
                         <Modal.Title>Login</Modal.Title>
@@ -52,9 +52,7 @@ export default function Login() {
 
                     </Modal.Body>
                     <Modal.Footer>
-                        <button variant="secondary" onClick={handleClose}>
-                            Close
-                        </button>
+
                         <button type="submit" variant="bg-orange" onClick={storagePush} >
                             Login
                         </button>

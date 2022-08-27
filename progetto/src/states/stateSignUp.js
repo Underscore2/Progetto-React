@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-export const modalLoginSlice = createSlice({
-    name: 'modalLogin',
+export const modalSignupSlice = createSlice({
+    name: 'modalSignUp',
     initialState: false,
     reducers: {
         active: (state, action) => state = true,

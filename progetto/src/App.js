@@ -26,20 +26,20 @@ function NoMatch() {
 export default function App() {
     return (
         <Provider store={store}>
-        <div className="App backg-black">
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Homepage />} />
-                </Route>
-                <Route path="*" element={<NoMatch />} />
-                <Route element={<PrivateRoute />}>
+            <div className="App backg-black">
+                <Routes>
                     <Route path="/" element={<Layout />}>
-                        <Route path="/dashboard" element={<Dashboard />} />
+                        <Route index element={<Homepage />} />
                     </Route>
-                </Route>
+                    <Route path="*" element={<NoMatch />} />
+                    <Route element={<PrivateRoute />}>
+                        <Route path="/" element={<Layout />}>
+                            <Route path="/dashboard" element={<Dashboard />} />
+                        </Route>
+                    </Route>
 
-            </Routes>
-        </div>
+                </Routes>
+            </div>
         </Provider>
     );
 }
