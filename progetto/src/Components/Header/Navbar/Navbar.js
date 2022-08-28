@@ -9,7 +9,7 @@ import SignUp from "../SignUp/SignUp";
 import { OffCanvasExample } from "./Offcanvas/Offcanvas";
 
 export default function Navbar() {
-  const { password, user, logout, loginHandler, signUpHandler } = useNavbar();
+  const { password, user, logout, loginHandler, signUpHandler, setRefresh } = useNavbar();
   return (
     <div className="container-xxl p-3 gradient-background">
       <Row className="m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100">
@@ -94,7 +94,7 @@ export default function Navbar() {
           />
         </Col>
       </Row>
-      <Login />
+      <Login setRefresh={setRefresh}/>
       <SignUp />
     </div>
   );

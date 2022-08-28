@@ -3,12 +3,12 @@ import React from "react";
 import useLogin from "../Login/utilities/useLogin.js";
 import { store } from "../../../states/Store.js";
 
-export default function Login() {
+export default function Login(props) {
     const {
         handleEmail, handlePassword,
         storagePush, handleClose,
         email, password
-    } = useLogin()
+    } = useLogin(props)
     return (
         <>
             <Modal show={store.getState().modalLogin} onHide={handleClose}>
