@@ -25,7 +25,7 @@ export default function Navbar() {
             style={{ width: "50px", height: "auto" }}
             alt="logo"
           />
-          <Link className="text-decoration-none font-secondary " to={"/"}>
+          <Link className="text-decoration-none font-secondary" to={"/"}>
             LMAO Corporation
           </Link>
         </Col>
@@ -94,7 +94,7 @@ export default function Navbar() {
           />
         </Col>
       </Row>
-      <Login setRefresh={setRefresh}/>
+      <Login setRefresh={setRefresh} />
       <SignUp />
     </div>
   );

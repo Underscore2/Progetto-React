@@ -10,19 +10,20 @@ export default function Footer() {
                 return (
                     <div className=' p-3 container-xxl'>
                         <Row className='m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100'>
-                            <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2">
+                            <Col xs={12} md={4} lg={6} xl={7} xxl={7} className="py-2">
                                 <Link to="/" className="d-flex align-items-center">
                                     <img
                                         src={item.navbarLogo}
                                         alt="logo"
                                         style={{ width: "50px", height: "auto" }}
+                                        className="uovo"
                                     ></img>
                                     <p className="font-secondary link m-0 f1 mt-2">
                                         {item.footer.subtitle}
                                     </p>
                                 </Link>
                             </Col>
-                            <Col xs={12} md={8} lg={6} xl={5} xxl={4} className='my-3'>
+                            <Col xs={12} md={8} lg={6} xl={5} xxl={5} className='my-3'>
                                 <Row className="d-flex w-100 p-0 m-0">
                                     {item.footer.footerLinks.map((element, index) => {
                                         return (
