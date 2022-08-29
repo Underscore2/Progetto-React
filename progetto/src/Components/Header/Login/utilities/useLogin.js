@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -52,31 +53,30 @@ export default function useLogin(props) {
       })
         .then((data) => data.json())
         .then((data) => {
+         
           if (data.authorized) {
             return (
               console.log(data),
-              localStorage.setItem("email", encrypt(email)),
-              localStorage.setItem("password", encrypt(password)),
+              localStorage.setItem("token", data.token),
               setLogin(dispatch(modalLoginSlice.actions.inactive())),
-              navigate("/homepage")
-            );
+              dispatch(
+                usersSlice.actions.add({
+                  user: encrypt(data.username),
+                  email: encrypt(data.email),
+                  token: data.token,
+                  authorized: true,
+                })
+                )
+                );
           } else {
-            return localStorage.clear(), setPassword("");
+            return( localStorage.clear(),
+            setPassword(""));
           }
         })
         .catch((err) => console.error(err));
-      dispatch(
-        usersSlice.actions.add({
-          email: encrypt(email),
-          password: encrypt(password),
-          authorized: true,
-        })
-      );
+     
       setEmail("");
       setPassword("");
-    } else {
-      console.log(inptEmail);
-      console.log(inptPassword);
     }
   }
 

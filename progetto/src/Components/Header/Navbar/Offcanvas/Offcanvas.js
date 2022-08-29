@@ -15,12 +15,11 @@ export function OffCanvasExample({ name, ...props }) {
 
   return (
     <div className="d-flex justify-content-end">
-      <a variant="primary" onClick={handleShow} className="me-2 d-md-none ">
+      <a href='!#' variant="primary" onClick={handleShow} className="me-2 d-md-none ">
         <img
           src={text.map((item) => item.navbarHamburger)}
           width="50px"
           height="auto"
-          classNameName=""
           alt=""
         ></img>
       </a>

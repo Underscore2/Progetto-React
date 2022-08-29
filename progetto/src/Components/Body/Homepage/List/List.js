@@ -3,22 +3,22 @@ import { Col, Row } from "react-bootstrap";
 import text from "../../../../utilities/texts.json";
 
 export default function List() {
-  return text.map((item) => {
+  return text.map((item,index) => {
     return (
-      <section className="container-xxl py-3 ">
+      <section className="container-xxl py-3" key={index}>
         <Row>
           <Col xs={12} md={6} className="order-1 mt-5 order-md-0 mt-md-0 d-flex justify-content-center align-items-center">
             <ul className="p-0 m-0">
               {item.list.map((point, index) => {
                 return (
-                  <>
+                  <div key={index}>
                     <li
                       key={index}
                       className={index % 2 ? "mt-3 font-secondary h4" : index % 3 ? "font-primary mt-3 h4" : "color-orange mt-3 h4"}
                     >
                       {point.li}
                     </li>
-                  </>
+                  </div>
                 );
               })}
             </ul>

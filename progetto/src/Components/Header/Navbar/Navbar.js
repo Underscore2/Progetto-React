@@ -4,15 +4,14 @@ import { Link } from "react-router-dom";
 import text from "../../../utilities/texts.json";
 import Login from "../Login/Login";
 import useNavbar from "./utilities/useNavbar";
-import { store } from "../../../states/Store";
 import SignUp from "../SignUp/SignUp";
 import { OffCanvasExample } from "./Offcanvas/Offcanvas";
-
+const token = localStorage.getItem("token")
 export default function Navbar() {
   const { password, user, logout, loginHandler, signUpHandler, setRefresh } = useNavbar();
   return (
-    <div className="container-xxl p-3 gradient-background">
-      <Row className="m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100">
+    <div className="container-xxl p-3  gradient-background">
+      <Row className="m-0 py-3 white-modules  justify-content-center align-items-center px-2 m-0 w-100">
         <Col
           className="p-1 align-items-center justify-content-around flex-sm-row"
           xs={8}
@@ -44,7 +43,7 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            {user && password ? (
+            {token != null ? (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
@@ -54,7 +53,7 @@ export default function Navbar() {
                 </Link>
               </li>
             ) : null}
-            {user && password ? (
+            {token  ? (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
@@ -75,7 +74,7 @@ export default function Navbar() {
                 </Link>
               </li>
             )}
-            {user && password ? null : (
+            {token != null ? null : (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"

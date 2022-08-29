@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { modalLoginSlice, usersSlice } from "../../../../states/stateLogin";
@@ -19,11 +20,11 @@ export default function useNavbar() {
   }
 
   function loginHandler() {
-    return setRefresh((c) => !c), dispatch(modalLoginSlice.actions.active());
+    return (setRefresh((c) => !c), dispatch(modalLoginSlice.actions.active()));
   }
 
   function signUpHandler() {
-    return setRefresh((c) => !c), dispatch(modalSignupSlice.actions.active());
+    return( setRefresh((c) => !c), dispatch(modalSignupSlice.actions.active()));
   }
 
   return {
