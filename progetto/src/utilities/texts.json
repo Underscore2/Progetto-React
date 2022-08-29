@@ -1,8 +1,9 @@
 [
-  {"navbarHamburger":"/images/cell.svg",
+  {
+    "navbarHamburger": "/images/cell.svg",
     "headerImg": "/images/hero.png",
-    "navbarLogo":"/images/egg-fill.svg",
-    "grafico":"/images/grafico.jpg",
+    "navbarLogo": "/images/egg-fill.svg",
+    "grafico": "/images/grafico.jpg",
     "title": "THE ONLY DONE FOR YOU OPTION PICKER",
     "subtitle": "Get trade alerts. Cancel anytime.",
     "preform": "Enter your email to create or restart your membership",
@@ -69,7 +70,7 @@
     },
     "footer": {
       "subtitle": "LMAO Corporation",
-      "description": "Disclaimer: Please be aware that trading stocks, futures, stock options, and futures options involves a substantial risk of loss and is not suitable for all investors. Past performance is not necessarily indicative of future results. INFORMATION IS FOR GENERAL EDUCATIONAL AND RESEARCH PURPOSES AND SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE. More info here",
+      "description": "Disclaimer: Please be aware that trading stocks, futures, stock options, and futures options involves a substantial risk of loss and is not suitable for all investors. Past performance is not necessarily indicative of future results. INFORMATION IS FOR GENERAL EDUCATIONAL AND RESEARCH PURPOSES AND SHOULD NOT BE CONSTRUED AS INDIVIDUAL INVESTMENT ADVICE.",
       "footerLinks": ["TERMS OF SERVICE", "DISCLAIMER", "PRIVACY POLICY"]
     }
   }

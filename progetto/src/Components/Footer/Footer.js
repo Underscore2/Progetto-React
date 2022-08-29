@@ -16,13 +16,14 @@ export default function Footer() {
                                         src={item.navbarLogo}
                                         alt="logo"
                                         style={{ width: "50px", height: "auto" }}
+                                        className="uovo"
                                     ></img>
                                     <p className="font-secondary link m-0 f1 mt-2">
                                         {item.footer.subtitle}
                                     </p>
                                 </Link>
                             </Col>
-                            <Col xs={12} md={8} lg={6} xl={5} xxl={4} className='my-3'>
+                            <Col xs={12} md={8} lg={6} xl={5} xxl={5} className='my-3'>
                                 <Row className="d-flex w-100 p-0 m-0">
                                     {item.footer.footerLinks.map((element, index) => {
                                         return (
