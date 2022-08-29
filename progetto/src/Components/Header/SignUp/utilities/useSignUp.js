@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
-import { modalSignupSlice, usersSlice } from "../../../../states/stateSignUp";
+import { modalSignupSlice } from "../../../../states/stateSignUp";
 
 export default function useSignUp() {
   const dispatch = useDispatch();

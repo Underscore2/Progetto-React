@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <div>
-            {texts.map((item) => {
+            {texts.map((item,index) => {
                 return (
-                    <div className=' p-3 container-xxl'>
-                        <Row className='m-0 py-3 white-modules justify-content-center align-items-center px-2 m-0 w-100'>
+                    <div className=' p-3 container-xxl mt-5' key={index}>
+                        <Row className='m-0 py-3 white-modules  justify-content-center align-items-center px-2 m-0 w-100'>
                             <Col xs={12} md={4} lg={6} xl={7} xxl={8} className="py-2">
                                 <Link to="/" className="d-flex align-items-center">
                                     <img

@@ -4,9 +4,9 @@ import text from "../../../../utilities/texts.json";
 
 export default function Cards() {
     return(
-        text.map((item) =>{
+        text.map((item,index) =>{
             return(
-                <section className="container-xxl py-3">
+                <section className="container-xxl py-3" key={index}>
                     <Row>
                         <Col lg={6} className="py-3 d-flex justify-content-center">
                     <Card className="white-modules font-primary border-orange w-75">
