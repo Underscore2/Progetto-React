@@ -1,5 +1,5 @@
 import { Modal, Form, } from "react-bootstrap";
-import React from "react";
+import React, { useContext } from "react";
 import useLogin from "../Login/utilities/useLogin.js";
 import { store } from "../../../states/Store.js";
 import "../../../css/helper-class.css"
@@ -10,6 +10,7 @@ export default function Login(props) {
         storagePush, handleClose,
         email, password
     } = useLogin(props)
+
     return (
         <>
             <Modal show={store.getState().modalLogin} onHide={handleClose}>
@@ -51,9 +52,6 @@ export default function Login(props) {
                     <Modal.Footer className="border-0">
                         <button type="submit" variant="bg-orange" onClick={storagePush} className="submit font-primary bg-orange rounded">
                             Login
-                        </button>
-                        <button type="submit" variant="bg-orange" onClick={storagePush} className="submit font-primary bg-orange rounded">
-                            testDev
                         </button>
                     </Modal.Footer>
                 </Form>
