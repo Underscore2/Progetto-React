@@ -1,14 +1,20 @@
 import { Row, Col } from "react-bootstrap";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import text from "../../../utilities/texts.json";
 import Login from "../Login/Login";
 import useNavbar from "./utilities/useNavbar";
 import SignUp from "../SignUp/SignUp";
 import { OffCanvasExample } from "./Offcanvas/Offcanvas";
-const token = localStorage.getItem("token")
+import NavbarContext from "../../../Contexts/NavbarContext";
 export default function Navbar() {
+  let token =localStorage.getItem("token")
+  const context=useContext(NavbarContext)
   const { password, user, logout, loginHandler, signUpHandler, setRefresh } = useNavbar();
+  useEffect(()=>{
+       token = localStorage.getItem("token")
+    
+  },[context])
   return (
     <div className="container-xxl p-3  gradient-background">
       <Row className="m-0 py-3 white-modules  justify-content-center align-items-center px-2 m-0 w-100">
@@ -43,7 +49,7 @@ export default function Navbar() {
                 Home
               </Link>
             </li>
-            {token != null ? (
+            {token ? (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
@@ -93,7 +99,7 @@ export default function Navbar() {
           />
         </Col>
       </Row>
-      <Login setRefresh={setRefresh}/>
+      <Login/>
       <SignUp />
     </div>
   );

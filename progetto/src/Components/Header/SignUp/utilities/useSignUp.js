@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
 import { modalSignupSlice } from "../../../../states/stateSignUp";
+import NavbarContext from "../../../../Contexts/NavbarContext";
 
 export default function useSignUp() {
+  const context = useContext(NavbarContext)
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [signup, setSignup] = useState(store.getState().modal);
@@ -56,7 +58,8 @@ export default function useSignUp() {
             localStorage.setItem("email",email),
             localStorage.setItem("password",password),
             dispatch(modalSignupSlice.actions.inactive()),
-            navigate("/")
+            context.setRefresh(f=>!f),
+            navigate("/dashboard")
             )
         }
       })

@@ -1,5 +1,5 @@
 import { Modal, Form, } from "react-bootstrap";
-import React from "react";
+import React, { useContext } from "react";
 import useLogin from "../Login/utilities/useLogin.js";
 import { store } from "../../../states/Store.js";
 
@@ -9,6 +9,7 @@ export default function Login(props) {
         storagePush, handleClose,
         email, password
     } = useLogin(props)
+
     return (
         <>
             <Modal show={store.getState().modalLogin} onHide={handleClose}>

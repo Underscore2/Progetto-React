@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
 import { modalLoginSlice, usersSlice } from "../../../../states/stateLogin";
 import { encrypt } from "../../../../utilities/encrypt";
+import NavbarContext from "../../../../Contexts/NavbarContext";
 export default function useLogin(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ export default function useLogin(props) {
   const [refresh, setRefresh] = useState(false);
   const inptEmail = document.querySelector("#email");
   const inptPassword = document.querySelector("#password");
-
+  const context = useContext(NavbarContext)
+  
   function handleEmail(event) {
     setEmail(event.target.value);
   }
@@ -56,7 +58,6 @@ export default function useLogin(props) {
          
           if (data.authorized) {
             return (
-              console.log(data),
               localStorage.setItem("token", data.token),
               setLogin(dispatch(modalLoginSlice.actions.inactive())),
               dispatch(
@@ -66,7 +67,9 @@ export default function useLogin(props) {
                   token: data.token,
                   authorized: true,
                 })
-                )
+                ),
+                context.setRefresh(f=>!f),
+                navigate('/dashboard')
                 );
           } else {
             return( localStorage.clear(),
