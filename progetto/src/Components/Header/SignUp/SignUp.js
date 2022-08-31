@@ -8,13 +8,13 @@ export default function SignUp() {
     return (
 
         <Modal show={store.getState().modalSignup} onHide={handleClose} >
-            <Form>
-                <Modal.Header closeButton>
-                    <Modal.Title>Sign Up</Modal.Title>
+            <Form className="bg-dark">
+                <Modal.Header closeButton className="border-0">
+                    <Modal.Title className="font-primary">Sign Up</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form.Group>
-                        <Form.Label>Username</Form.Label>
+                    <Form.Group className="mt-3">
+                        <Form.Label className="font-primary">Username</Form.Label>
                         <Form.Control
                             id="username"
                             name='username'
@@ -22,10 +22,11 @@ export default function SignUp() {
                             required={true}
                             placeholder="Username"
                             onChange={handleUsername}
+                            className="bg-secondary border-dark"
                         />
                     </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Email address</Form.Label>
+                    <Form.Group className="mt-3">
+                        <Form.Label className="font-primary">Email address</Form.Label>
                         <Form.Control
                             type="email"
                             id="email"
@@ -34,29 +35,31 @@ export default function SignUp() {
                             placeholder="name@example.com"
                             autoFocus
                             onChange={handleEmail}
+                            className="bg-secondary border-dark"
                         />
                     </Form.Group>
-                    <Form.Group>
-                        <Form.Label>Password</Form.Label>
+                    <Form.Group className="mt-3">
+                        <Form.Label className="font-primary">Password</Form.Label>
                         <Form.Control
                             id="password"
                             name='password'
                             type="password"
                             required={true}
-                            placeholder="Password"
+                            placeholder="********"
                             onChange={handlePassword}
+                            className="bg-secondary border-dark"
                         />
                     </Form.Group>
 
-                    <Form.Group>
-                        <Form.Label>
+                    <Form.Group className="mt-3 d-flex gap-3">
+                        <Form.Label className="font-primary mb-1">
                             Accept terms and conditions
                         </Form.Label>
-                        <input type="checkbox" required onClick={handleAgreement}></input>
+                        <input type="checkbox" required onClick={handleAgreement} />
                     </Form.Group>
                 </Modal.Body>
-                <Modal.Footer>
-                    <button type="submit" variant="bg-orange" onClick={submitLogin}>
+                <Modal.Footer className="border-0">
+                    <button type="submit" variant="bg-orange" onClick={submitLogin} className="submit font-primary bg-orange rounded">
                         Sign Up
                     </button>
                 </Modal.Footer>

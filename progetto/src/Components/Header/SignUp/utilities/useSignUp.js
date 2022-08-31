@@ -53,7 +53,7 @@ export default function useSignUp() {
       .then((data) => data.json())
       .then((data) => {
         console.log(data)
-        if (data.authorized === true) {
+        if (data.id === true) {
             return(
             localStorage.setItem("email",email),
             localStorage.setItem("password",password),

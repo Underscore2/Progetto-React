@@ -1,13 +1,17 @@
 import React, { useState } from "react";
+import "../../../../css/helper-class.css"
 import Offcanvas from "react-bootstrap/Offcanvas";
 import text from "../../../../utilities/texts.json";
 import { Link } from "react-router-dom";
+import useNavbar from "../utilities/useNavbar";
 
 export function OffCanvasExample({ name, ...props }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const { signUpHandler } = useNavbar()
 
   return (
     <div className="d-flex justify-content-end">
@@ -19,11 +23,22 @@ export function OffCanvasExample({ name, ...props }) {
           alt=""
         ></img>
       </a>
-      <Offcanvas show={show} onHide={handleClose} {...props}>
+      <Offcanvas show={show} onHide={handleClose} {...props} className="bg-dark">
         <Offcanvas.Header closeButton>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <ul className="gx-5 list-unstyled justify-content-sm-end p-0 m-0 gap:5">
+
+          <img
+            src={text.map((item) => item.navbarLogo)}
+            className="uovo"
+            style={{ width: "50px", height: "auto" }}
+            alt="logo"
+          />
+          <span className="text-decoration-none font-secondary" to={"/"}>
+            LMAO Corporation
+          </span>
+
+          <ul className="gx-5 list-unstyled justify-content-sm-end p-0 mt-4 gap:5">
             <li>
               <Link
                 className="text-decoration-none px-2 font-secondary"
@@ -67,9 +82,9 @@ export function OffCanvasExample({ name, ...props }) {
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
-                  to={"signup"}
+                  to={"/"}
                 >
-                  Sign Up
+                  <span onClick={signUpHandler}>Sign up</span>
                 </Link>
               </li>
             )}
