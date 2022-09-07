@@ -1,0 +1,217 @@
+/*************************BUTTSTROP©***********************/
+
+/***************************** MISCELLANEOUS *******************/
+
+.border-dev {
+  border: 1px solid red;
+}
+
+.border-orange {
+  border: 1px solid #ff8a00;
+}
+.uovo {
+  margin-right: 0.1rem;
+}
+.uovo:hover {
+  cursor: pointer;
+  animation: vibrate 0.3s linear both;
+}
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/******************************COLORS*****************************/
+
+.font-primary {
+  color: #eeeeee;
+}
+
+.font-secondary {
+  color: #babcbc;
+}
+
+.color-orange {
+  color: #ff8a00;
+}
+
+.bg-orange {
+  background-color: #ff8a00;
+  border-color: #ff8a00;
+}
+
+.bg-orange:hover {
+  background-color: #ff8a00;
+  border-color: #ff8a00;
+}
+
+.color-green {
+  color: #30deab;
+}
+
+.color-red {
+  color: #ff5972;
+}
+
+.gradient {
+  background: rgb(48, 222, 171);
+  background: linear-gradient(
+    180deg,
+    rgba(48, 222, 171, 1) 35%,
+    rgba(255, 89, 114, 1) 100%
+  );
+}
+
+.white-modules {
+  background-color: rgba(255, 255, 255, 0.111);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+}
+
+a:hover {
+  color: white;
+  transition: 3.5ms ease-in-out;
+}
+
+/******************************COLORS*****************************/
+
+.font-primary {
+  color: #eeeeee;
+}
+
+.font-secondary {
+  color: #abaaaa;
+}
+
+.color-orange {
+  color: #ff8a00;
+}
+
+.color-green {
+  color: #30deab;
+}
+
+.color-red {
+  color: #ff5972;
+}
+
+.gradient {
+  background: rgb(48, 222, 171);
+  background: linear-gradient(
+    180deg,
+    rgba(48, 222, 171, 1) 35%,
+    rgba(255, 89, 114, 1) 100%
+  );
+}
+
+.bgblack {
+  background-color: #1e1e1e;
+}
+
+.white-modules {
+  background-color: rgba(255, 255, 255, 0.111);
+  backdrop-filter: blur(3px);
+  border-radius: 5px;
+}
+
+.link:hover {
+  color: rgb(255, 255, 255);
+  transition: 3.5ms ease-in-out;
+}
+
+/**********************************FONT SIZE***************************/
+
+a {
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.f-title {
+  font-size: 3rem;
+}
+
+.hero {
+  max-width: 115%;
+  max-height: 115%;
+  display: block;
+}
+
+.desc-img {
+  max-width: 65%;
+  max-height: 65%;
+  display: block;
+}
+
+.graph {
+  max-width: 80%;
+  max-height: 70%;
+  display: block;
+}
+
+.submit:hover {
+  animation: shadow-drop-center 0.6s linear both;
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+
+  100% {
+    box-shadow: 0 0 20px 0 #ff8827;
+  }
+}
+
+.footerlink {
+  font-size: 14px;
+}
+
+.f1 {
+  font-size: 16px;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient {
+  height: 600px;
+  background: linear-gradient(62deg, #070707, #100e0f, #0a1f27, #021813);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}

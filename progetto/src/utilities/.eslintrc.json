@@ -1,0 +1,18 @@
+{
+    "env": {
+        "browser": true
+    },
+    "rules": {
+        // Override our default settings just for this directory
+        "eqeqeq": "off",
+        "strict": "off",
+        "no-unused-vars":0,
+        "jsx-a11y/anchor-is-valid": [
+            "error",
+            {
+              "components": ["Link"],
+              "specialLink": ["hrefLeft", "hrefRight"]
+            }
+          ]
+    }
+}
