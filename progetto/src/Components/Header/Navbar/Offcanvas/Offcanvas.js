@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import "../../../../css/helper-class.css"
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -15,7 +16,7 @@ export function OffCanvasExample({ name, ...props }) {
 
   return (
     <div className="d-flex justify-content-end">
-      <a href='!#' variant="primary" onClick={handleShow} className="me-2 d-md-none ">
+      <a variant="primary" onClick={handleShow} className="me-2 d-md-none ">
         <img
           src={text.map((item) => item.navbarHamburger)}
           width="50px"
