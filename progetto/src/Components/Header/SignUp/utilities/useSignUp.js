@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { store } from "../../../../states/Store";
 import { modalSignupSlice } from "../../../../states/stateSignUp";
+import { usersSlice } from "../../../../states/stateLogin";
+import { encrypt } from "../../../../utilities/encrypt";
 import NavbarContext from "../../../../Contexts/NavbarContext";
 
 export default function useSignUp() {
@@ -53,13 +55,23 @@ export default function useSignUp() {
       .then((data) => data.json())
       .then((data) => {
         console.log(data)
-        if (data.id === true) {
+        if (data.user.id) {
             return(
+
             localStorage.setItem("email",email),
             localStorage.setItem("password",password),
             dispatch(modalSignupSlice.actions.inactive()),
-            context.setRefresh(f=>!f),
-            navigate("/dashboard")
+            dispatch(
+              usersSlice.actions.add({
+                user: encrypt(data.username),
+                email: encrypt(data.email),
+                token: data.token,
+                authorized: true,
+              }),
+              ),
+            localStorage.setItem("token",data.token),
+            context.setRefresh(f=>!f)
+            
             )
         }
       })
