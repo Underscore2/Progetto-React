@@ -27,7 +27,6 @@ export default function Login(props) {
                                 id="email"
                                 name='email'
                                 value={email}
-                                pattern="[a-zA-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                                 required={true}
                                 placeholder="name@example.com" bg="primary"
                                 autoFocus
