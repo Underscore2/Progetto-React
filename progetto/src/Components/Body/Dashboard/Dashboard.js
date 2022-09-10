@@ -5,13 +5,8 @@ import TradingViewWidget, { Themes } from "react-tradingview-widget";
 import Accordion from "react-bootstrap/Accordion";
 
 export default function Dashboard() {
-  let logged = false;
+  
 
-  store
-    .getState()
-    .users.map((user) =>
-      user.authorized === true ? (logged = true) : (logged = false)
-    );
 
   const aziende = [
     { azienda: "APPLE", codice: "AAPL" },
@@ -23,7 +18,7 @@ export default function Dashboard() {
     { azienda: "AMD", codice: "AMD" },
   ];
 
-  if (logged) {
+ 
     return (
       <div className="container-xxl p-3 gradient-background my-3">
         {aziende.map((item, index) => {
@@ -79,5 +74,5 @@ export default function Dashboard() {
         })}
       </div>
     );
-  } else return <Navigate to="/Giangischi" replace />;
-}
+  }  
+
