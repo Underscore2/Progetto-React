@@ -1,18 +1,24 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
-import "../../../../css/helper-class.css"
+import React, { useState, useEffect } from "react";
+import "../../../../css/helper-class.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import text from "../../../../utilities/texts.json";
 import { Link } from "react-router-dom";
 import useNavbar from "../utilities/useNavbar";
 
 export function OffCanvasExample({ name, ...props }) {
+
+  let token =localStorage.getItem("token")
+  useEffect(()=>{
+       token = localStorage.getItem("token")
+    
+  },[])
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const { signUpHandler } = useNavbar()
+  const { signUpHandler } = useNavbar();
 
   return (
     <div className="d-flex justify-content-end">
@@ -24,11 +30,14 @@ export function OffCanvasExample({ name, ...props }) {
           alt=""
         ></img>
       </a>
-      <Offcanvas show={show} onHide={handleClose} {...props} className="bg-dark">
-        <Offcanvas.Header closeButton>
-        </Offcanvas.Header>
+      <Offcanvas
+        show={show}
+        onHide={handleClose}
+        {...props}
+        className="bg-dark"
+      >
+        <Offcanvas.Header closeButton></Offcanvas.Header>
         <Offcanvas.Body>
-
           <img
             src={text.map((item) => item.navbarLogo)}
             className="uovo"
@@ -48,7 +57,7 @@ export function OffCanvasExample({ name, ...props }) {
                 Home
               </Link>
             </li>
-            {props.user && props.password ? (
+            {token ? (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
@@ -58,7 +67,7 @@ export function OffCanvasExample({ name, ...props }) {
                 </Link>
               </li>
             ) : null}
-            {props.user && props.password ? (
+            {token ? (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
@@ -79,7 +88,7 @@ export function OffCanvasExample({ name, ...props }) {
                 </Link>
               </li>
             )}
-            {props.user && props.password ? null : (
+            {token ? null : (
               <li>
                 <Link
                   className="text-decoration-none px-2 font-secondary"
